@@ -1,0 +1,53 @@
+{
+  "status": {
+    "open": true,
+    "message": "ready to work on your dream avatar?"
+  },
+
+  "socials": [
+    { "name": "Instagram", "url": "https://instagram.com/YOUR_HANDLE", "icon": "instagram" },
+    { "name": "Ko-fi",     "url": "https://ko-fi.com/YOUR_HANDLE",     "icon": "kofi" },
+    { "name": "YouTube",   "url": "https://youtube.com/@YOUR_CHANNEL", "icon": "youtube" },
+    { "name": "Fiverr",    "url": "https://fiverr.com/YOUR_HANDLE",    "icon": "fiverr" },
+    { "name": "Trello",    "url": "https://trello.com/YOUR_BOARD",     "icon": "trello" }
+  ],
+
+  "avatar": {
+    "image": "",
+    "name": "hi!! i'm mitty ˆoˆ",
+    "bio": "mitty · enfp-t · illim · istp-t\ni make avatar edits for vrchat!\nnew to comms, learning as i go ♡"
+  },
+
+  "novabeast": {
+    "image": "",
+    "description": "Novabeasts & Gumroad avatars by my friend! Check out their amazing work if you're looking for something a little different ♡",
+    "link_text": "check it out here →",
+    "link_url": "#"
+  },
+
+  "previous_works": [
+    { "image": "", "label": "work 1" },
+    { "image": "", "label": "work 2" },
+    { "image": "", "label": "work 3" },
+    { "image": "", "label": "work 4" }
+  ],
+
+  "gallery": {
+    "friends": [
+      { "image": "", "label": "friend 1" },
+      { "image": "", "label": "friend 2" },
+      { "image": "", "label": "friend 3" },
+      { "image": "", "label": "friend 4" }
+    ],
+    "clients": [
+      { "image": "", "label": "client 1" },
+      { "image": "", "label": "client 2" },
+      { "image": "", "label": "client 3" }
+    ]
+  },
+
+  "videos": [
+    { "youtube_id": "", "title": "video 1" },
+    { "youtube_id": "", "title": "video 2" }
+  ]
+}
