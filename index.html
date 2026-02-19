@@ -779,9 +779,10 @@ function renderVideos(cfg) {
   const origin = encodeURIComponent(location.origin);
   grid.innerHTML = videos.map(v => `
     <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/${v.youtube_id}?origin=${origin}&rel=0"
+      <iframe src="https://www.youtube-nocookie.com/embed/${v.youtube_id}?origin=${origin}&rel=0"
               title="${v.title || 'video'}" allowfullscreen
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>`).join('');
 }
 
