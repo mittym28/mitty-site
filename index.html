@@ -19,7 +19,65 @@
     --dark: #2e1a28;
     --muted: #8a6070;
     --card: #fffafc;
+    --transition: background 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
   }
+
+  /* ── DARK MODE ── */
+  body.dark {
+    --cream: #1e1220;
+    --blush: #2a1a24;
+    --rose: #6b3050;
+    --deep-rose: #c4618a;
+    --berry: #e07aa0;
+    --soft-mint: #1a2e28;
+    --mint: #2a4a40;
+    --lavender: #231830;
+    --periwinkle: #2e2848;
+    --dark: #f0d8e8;
+    --muted: #c09ab0;
+    --card: #1a1018;
+  }
+  body.dark { background: #120c10; }
+  body.dark::before {
+    background-image:
+      radial-gradient(circle at 20% 20%, #2a1020 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, #0e1424 0%, transparent 50%),
+      radial-gradient(circle at 60% 10%, #101a10 0%, transparent 40%);
+  }
+  body.dark .card {
+    box-shadow: 0 4px 0 #8a3060, 0 8px 0 #8a306044, 0 12px 40px rgba(80,20,50,0.5);
+  }
+  body.dark .compat-strip { background: linear-gradient(90deg, #231830, #1a2e28, #231830); }
+  body.dark .open-card    { background: linear-gradient(135deg, #1e1228, #231830); }
+  body.dark .addons-box   { background: linear-gradient(135deg, #1e1428, var(--lavender)); }
+  body.dark .nova-box     { background: linear-gradient(135deg, #1e1228, var(--lavender)); }
+  body.dark .kofi-cta     { background: linear-gradient(135deg, var(--blush), #1e1228); }
+  body.dark .tos-note     { background: linear-gradient(135deg, var(--lavender), #181428); }
+  body.dark .work-placeholder   { background: linear-gradient(135deg, #2a1824, var(--lavender)); }
+  body.dark .avatar-placeholder { background: linear-gradient(135deg, var(--blush), #1e1228, var(--lavender)); }
+  body.dark .video-placeholder  { background: linear-gradient(135deg, var(--blush), var(--lavender)); }
+  body.dark .nova-img-placeholder { background: linear-gradient(135deg, var(--blush), var(--lavender)); }
+
+  /* smooth transitions */
+  body, .card, nav, nav button, .content, .open-card, .compat-strip,
+  .price-tabs, .price-body, .price-tab-btn, .social-btn, .addons-box,
+  .nova-box, .kofi-cta, .tos-section, .tos-note, .work-placeholder,
+  .avatar-placeholder, .video-placeholder, footer {
+    transition: var(--transition);
+  }
+
+  /* Dark mode toggle button */
+  .dark-toggle {
+    position: fixed; bottom: 20px; right: 20px; z-index: 100;
+    background: var(--berry); border: none; border-radius: 50%;
+    width: 44px; height: 44px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; box-shadow: 0 4px 0 #a0466a, 0 4px 16px rgba(0,0,0,0.2);
+    transition: transform 0.18s, box-shadow 0.18s, background 0.3s;
+  }
+  .dark-toggle:hover { transform: translateY(-2px) scale(1.08); box-shadow: 0 6px 0 #a0466a; }
+  .dark-toggle:active { transform: translateY(1px); box-shadow: 0 2px 0 #a0466a; }
+  body.dark .dark-toggle { background: #4a2840; box-shadow: 0 4px 0 #2a1428, 0 4px 16px rgba(0,0,0,0.5); }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -394,6 +452,9 @@
   </div>
 </div>
 
+<!-- Dark mode toggle -->
+<button class="dark-toggle" id="dark-toggle" onclick="toggleDark()" title="toggle dark mode">🌙</button>
+
 <div class="bg-deco">
   <span class="star" style="top:5%;  left:4%;  animation-delay:0s">✦</span>
   <span class="star" style="top:15%; left:92%; animation-delay:1s">✿</span>
@@ -734,6 +795,29 @@ fetch(`config.json?v=${CONFIG_VERSION}`)
     renderVideos(cfg);
   })
   .catch(err => console.warn('Could not load config.json:', err.message));
+
+// ── Dark mode ─────────────────────────────────────────────────────────────────
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark');
+  localStorage.setItem('mitty-dark', isDark ? '1' : '0');
+  document.getElementById('dark-toggle').textContent = isDark ? '☀️' : '🌙';
+}
+// Apply saved preference immediately
+(function() {
+  const saved = localStorage.getItem('mitty-dark');
+  if (saved === '1') {
+    document.body.classList.add('dark');
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('dark-toggle');
+      if (btn) btn.textContent = '☀️';
+    });
+  }
+  // If script runs after DOM is ready, update button right away
+  if (document.readyState !== 'loading' && saved === '1') {
+    const btn = document.getElementById('dark-toggle');
+    if (btn) btn.textContent = '☀️';
+  }
+})();
 
 // ── Navigation ────────────────────────────────────────────────────────────────
 function switchTab(tab, btn) {
