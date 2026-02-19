@@ -31,43 +31,46 @@
     { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974237969514622/d0397257_original.png?ex=699828fb&is=6996d77b&hm=042b4304bc6c72052dfb6dae8aac3d8080600ecbf9b0127bbc6fc51a8ec64f37&", "label": "work 3" },
     { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974238397595709/10046695_original.png?ex=699828fb&is=6996d77b&hm=9a079c4b06d8c986eddfcc713fccfdf612f0c2de5a230956348e74d2adbaa0b9&", "label": "work 4" },
     { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974238871289939/37d26f70_original.png?ex=699828fb&is=6996d77b&hm=070c0d74bb98ff3e454d6a32a4e1c6d6e0c7583f5e7c53536339e2d6bacda811&", "label": "work 5" },
-    { "image": "001.png", "label": "work 6" },
-    { "image": "000.png", "label": "work 7" },
-    { "image": "001.png", "label": "work 8" }
+    { "image": "Images/001.png", "label": "work 6" },
+    { "image": "Images/000.png", "label": "work 7" },
+    { "image": "Images/001.png", "label": "work 8" }
   ],
 
   "gallery": {
     "friends": [
-      { "image": "298d5eac_original.jpg"},
-      { "image": "9dd7fdf8_original.jpg"},
-      { "image": "dde333ee_original.jpg"},
-      { "image": "61261c36_original.jpg"},
-      { "image": "c63217fa_original.jpg"},
-      { "image": "e95c3c23_original.jpg"},
-      { "image": "efcbf90e_original.jpg"},
-      { "image": "463e6097_original.jpg"},
-      { "image": "b26cca8a_original.jpg"},
-      { "image": "9ffc9672_original.jpg"},
-      { "image": "50e138d6_original.jpg"},
-      { "image": "eh.jpg"}
+      { "image": "Images/298d5eac_original.jpg"},
+      { "image": "Images/9dd7fdf8_original.jpg"},
+      { "image": "Images/dde333ee_original.jpg"},
+      { "image": "Images/61261c36_original.jpg"},
+      { "image": "Images/c63217fa_original.jpg"},
+      { "image": "Images/e95c3c23_original.jpg"},
+      { "image": "Images/efcbf90e_original.jpg"},
+      { "image": "Images/463e6097_original.jpg"},
+      { "image": "Images/b26cca8a_original.jpg"},
+      { "image": "Images/9ffc9672_original.jpg"},
+      { "image": "Images/50e138d6_original.jpg"},
+      { "image": "Images/eh.jpg"}
       
     ],
     "clients": [
-      { "image": "kawaii.png"},
-      { "image": "6b147bfd_original.jpg"},
-      { "image": "1e4786aa_original.jpg"},
-      { "image": "ecfcf01c_original.jpg"},
-      { "image": "8437c31d_original.jpg"},
-      { "image": "ae383bc8_original.jpg"},
-      { "image": "398e5c96_original.jpg"},
-      { "image": "27c0df36_original.jpg"},
-      { "image": "0b277623_original.jpg"},
-      { "image": "f5ab0b3d_original.jpg"}
+      { "image": "Images/kawaii.png"},
+      { "image": "Images/6b147bfd_original.jpg"},
+      { "image": "Images/1e4786aa_original.jpg"},
+      { "image": "Images/ecfcf01c_original.jpg"},
+      { "image": "Images/8437c31d_original.jpg"},
+      { "image": "Images/ae383bc8_original.jpg"},
+      { "image": "Images/398e5c96_original.jpg"},
+      { "image": "Images/27c0df36_original.jpg"},
+      { "image": "Images/0b277623_original.jpg"},
+      { "image": "Images/f5ab0b3d_original.jpg"}
     ]
   },
 
   "videos": [
-    { "youtube_id": "", "title": "video 1" },
-    { "youtube_id": "", "title": "video 2" }
+    { "youtube_id": "https://www.youtube.com/watch?v=W6mSfHxVWMQ"},
+    { "youtube_id": "https://www.youtube.com/watch?v=ux4woQQhShA"},
+    { "youtube_id": "https://www.youtube.com/watch?v=UJr8EQ8OONs"},
+    { "youtube_id": "https://www.youtube.com/watch?v=Q9UG-JquF-8"},
+    { "youtube_id": "https://www.youtube.com/watch?v=Ao8ZjQGBhsM"}
   ]
 }
