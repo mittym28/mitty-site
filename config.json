@@ -5,31 +5,35 @@
   },
 
   "socials": [
-    { "name": "Instagram", "url": "https://instagram.com/YOUR_HANDLE", "icon": "instagram" },
-    { "name": "Ko-fi",     "url": "https://ko-fi.com/YOUR_HANDLE",     "icon": "kofi" },
-    { "name": "YouTube",   "url": "https://youtube.com/@YOUR_CHANNEL", "icon": "youtube" },
-    { "name": "Fiverr",    "url": "https://fiverr.com/YOUR_HANDLE",    "icon": "fiverr" },
-    { "name": "Trello",    "url": "https://trello.com/YOUR_BOARD",     "icon": "trello" }
+    { "name": "Instagram", "url": "https://www.instagram.com/mittym28", "icon": "instagram" },
+    { "name": "Ko-fi",     "url": "https://ko-fi.com/mittymi",     "icon": "kofi" },
+    { "name": "YouTube",   "url": "https://www.youtube.com/@MittyMi", "icon": "youtube" },
+    { "name": "Fiverr",    "url": "https://www.fiverr.com/mittymi",    "icon": "fiverr" },
+    { "name": "Trello",    "url": "https://trello.com/b/FzjQ49AJ/avatar-progress",     "icon": "trello" }
   ],
 
   "avatar": {
-    "image": "",
+    "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473973956804481054/image02.png?ex=699828b8&is=6996d738&hm=49e40e321ef7f727f04607c6b11f39aa0eebdbe362b0816eb1589a279eeec7be&",
     "name": "hi!! i'm mitty ˆoˆ",
     "bio": "mitty · enfp-t · illim · istp-t\ni make avatar edits for vrchat!\nnew to comms, learning as i go ♡"
   },
 
   "novabeast": {
-    "image": "",
+    "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974031106707532/image01.png?ex=699828ca&is=6996d74a&hm=a2c04e846681fede20c18daff53bf61530d30f1e28622d3f87bd302cc76682cc&",
     "description": "Novabeasts & Gumroad avatars by my friend! Check out their amazing work if you're looking for something a little different ♡",
     "link_text": "check it out here →",
-    "link_url": "#"
+    "link_url": "https://ko-fi.com/bluscomms/commissions"
   },
 
   "previous_works": [
-    { "image": "", "label": "work 1" },
-    { "image": "", "label": "work 2" },
-    { "image": "", "label": "work 3" },
-    { "image": "", "label": "work 4" }
+    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974237004824669/a693459d_original.png?ex=699828fb&is=6996d77b&hm=f0ab1f6d74ba03cb428d371fa4acaa275ffb0ce2816e074d0135d52069e3761a&", "label": "work 1" },
+    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974237533438104/997b6c45_original.png?ex=699828fb&is=6996d77b&hm=cc3980008834123e459b09d7336a1d49c3add6a7502f5c3a8a157f1ef93282d9&", "label": "work 2" },
+    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974237969514622/d0397257_original.png?ex=699828fb&is=6996d77b&hm=042b4304bc6c72052dfb6dae8aac3d8080600ecbf9b0127bbc6fc51a8ec64f37&", "label": "work 3" },
+    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974238397595709/10046695_original.png?ex=699828fb&is=6996d77b&hm=9a079c4b06d8c986eddfcc713fccfdf612f0c2de5a230956348e74d2adbaa0b9&", "label": "work 4" },
+    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974238871289939/37d26f70_original.png?ex=699828fb&is=6996d77b&hm=070c0d74bb98ff3e454d6a32a4e1c6d6e0c7583f5e7c53536339e2d6bacda811&", "label": "work 5" },
+    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974239345512520/2552f556_original.png?ex=699828fb&is=6996d77b&hm=e7a0b3510cfba9cf43b9d9752e608d187a304fa70994aec8617a8b93801fdecf&", "label": "work 6" },
+    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974239869669426/59f0df1a_original.png?ex=699828fb&is=6996d77b&hm=defc013be009929c2012c373bb0dbdc445a247ab28de6f4fd139213381b4e56d&", "label": "work 7" },
+    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974240267993159/abb2fff6_original.png?ex=699828fb&is=6996d77b&hm=15c2e0adcb2d7ee4a4b7e6d107f8faa20c5d4315c24a2881d1b8008ec4cfbe50&", "label": "work 8" }
   ],
 
   "gallery": {
