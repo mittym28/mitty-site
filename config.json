@@ -31,22 +31,38 @@
     { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974237969514622/d0397257_original.png?ex=699828fb&is=6996d77b&hm=042b4304bc6c72052dfb6dae8aac3d8080600ecbf9b0127bbc6fc51a8ec64f37&", "label": "work 3" },
     { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974238397595709/10046695_original.png?ex=699828fb&is=6996d77b&hm=9a079c4b06d8c986eddfcc713fccfdf612f0c2de5a230956348e74d2adbaa0b9&", "label": "work 4" },
     { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974238871289939/37d26f70_original.png?ex=699828fb&is=6996d77b&hm=070c0d74bb98ff3e454d6a32a4e1c6d6e0c7583f5e7c53536339e2d6bacda811&", "label": "work 5" },
-    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974239345512520/2552f556_original.png?ex=699828fb&is=6996d77b&hm=e7a0b3510cfba9cf43b9d9752e608d187a304fa70994aec8617a8b93801fdecf&", "label": "work 6" },
-    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974239869669426/59f0df1a_original.png?ex=699828fb&is=6996d77b&hm=defc013be009929c2012c373bb0dbdc445a247ab28de6f4fd139213381b4e56d&", "label": "work 7" },
-    { "image": "https://cdn.discordapp.com/attachments/878094299907129427/1473974240267993159/abb2fff6_original.png?ex=699828fb&is=6996d77b&hm=15c2e0adcb2d7ee4a4b7e6d107f8faa20c5d4315c24a2881d1b8008ec4cfbe50&", "label": "work 8" }
+    { "image": "001.png", "label": "work 6" },
+    { "image": "000.png", "label": "work 7" },
+    { "image": "001.png", "label": "work 8" }
   ],
 
   "gallery": {
     "friends": [
-      { "image": "", "label": "friend 1" },
-      { "image": "", "label": "friend 2" },
-      { "image": "", "label": "friend 3" },
-      { "image": "", "label": "friend 4" }
+      { "image": "298d5eac_original.jpg"},
+      { "image": "9dd7fdf8_original.jpg"},
+      { "image": "dde333ee_original.jpg"},
+      { "image": "61261c36_original.jpg"},
+      { "image": "c63217fa_original.jpg"},
+      { "image": "e95c3c23_original.jpg"},
+      { "image": "efcbf90e_original.jpg"},
+      { "image": "463e6097_original.jpg"},
+      { "image": "b26cca8a_original.jpg"},
+      { "image": "9ffc9672_original.jpg"},
+      { "image": "50e138d6_original.jpg"},
+      { "image": "eh.jpg"}
+      
     ],
     "clients": [
-      { "image": "", "label": "client 1" },
-      { "image": "", "label": "client 2" },
-      { "image": "", "label": "client 3" }
+      { "image": "kawaii.png"},
+      { "image": "6b147bfd_original.jpg"},
+      { "image": "1e4786aa_original.jpg"},
+      { "image": "ecfcf01c_original.jpg"},
+      { "image": "8437c31d_original.jpg"},
+      { "image": "ae383bc8_original.jpg"},
+      { "image": "398e5c96_original.jpg"},
+      { "image": "27c0df36_original.jpg"},
+      { "image": "0b277623_original.jpg"},
+      { "image": "f5ab0b3d_original.jpg"}
     ]
   },
 
