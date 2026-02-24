@@ -64,10 +64,10 @@
   },
 
   "videos": [
-    { "youtube_id": "W6mSfHxVWMQ"},
-    { "youtube_id": "ux4woQQhShA"},
-    { "youtube_id": "UJr8EQ8OONs"},
-    { "youtube_id": "Q9UG-JquF-8"},
-    { "youtube_id": "Ao8ZjQGBhsM"}
+    { "youtube_id": "https://youtu.be/W6mSfHxVWMQ"},
+    { "youtube_id": "https://youtu.be/Q9UG-JquF-8"},
+    { "youtube_id": "https://youtu.be/ux4woQQhShA"},
+    { "youtube_id": "https://youtu.be/UJr8EQ8OONs"},
+    { "youtube_id": "https://youtu.be/Ao8ZjQGBhsM"}
   ]
 }
