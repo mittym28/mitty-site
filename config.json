@@ -1,15 +1,20 @@
 {
+  "trello": {
+    "api_key": "81512b5049d047e4773449eae1374dca",
+    "board_id": "FzjQ49AJ"
+  },
+
   "status": {
     "open": true,
     "message": "ready to work on your dream avatar?"
   },
 
   "socials": [
-    { "name": "Instagram", "url": "https://www.instagram.com/mittym28", "icon": "instagram" },
-    { "name": "Ko-fi",     "url": "https://ko-fi.com/mittymi",     "icon": "kofi" },
-    { "name": "YouTube",   "url": "https://www.youtube.com/@MittyMi", "icon": "youtube" },
-    { "name": "Fiverr",    "url": "https://www.fiverr.com/mittymi",    "icon": "fiverr" },
-    { "name": "Trello",    "url": "https://trello.com/b/FzjQ49AJ/avatar-progress",     "icon": "trello" }
+    { "name": "Instagram", "url": "https://www.instagram.com/mittym28",           "icon": "instagram" },
+    { "name": "Ko-fi",     "url": "https://ko-fi.com/mittymi",                     "icon": "kofi" },
+    { "name": "YouTube",   "url": "https://www.youtube.com/@MittyMi",              "icon": "youtube" },
+    { "name": "Fiverr",    "url": "https://www.fiverr.com/mittymi",                "icon": "fiverr" },
+    { "name": "Trello",    "url": "https://trello.com/b/FzjQ49AJ/avatar-progress", "icon": "trello" }
   ],
 
   "avatar": {
@@ -34,40 +39,39 @@
 
   "gallery": {
     "friends": [
-      { "image": "Images/298d5eac_original.jpg"},
-      { "image": "Images/9dd7fdf8_original.jpg"},
-      { "image": "Images/dde333ee_original.jpg"},
-      { "image": "Images/61261c36_original.jpg"},
-      { "image": "Images/c63217fa_original.jpg"},
-      { "image": "Images/e95c3c23_original.jpg"},
-      { "image": "Images/efcbf90e_original.jpg"},
-      { "image": "Images/463e6097_original.jpg"},
-      { "image": "Images/b26cca8a_original.jpg"},
-      { "image": "Images/9ffc9672_original.jpg"},
-      { "image": "Images/50e138d6_original.jpg"},
-      { "image": "Images/eh.jpg"},
-      { "image": "Images/mit.png"}
-      
+      { "image": "Images/298d5eac_original.jpg" },
+      { "image": "Images/9dd7fdf8_original.jpg" },
+      { "image": "Images/dde333ee_original.jpg" },
+      { "image": "Images/61261c36_original.jpg" },
+      { "image": "Images/c63217fa_original.jpg" },
+      { "image": "Images/e95c3c23_original.jpg" },
+      { "image": "Images/efcbf90e_original.jpg" },
+      { "image": "Images/463e6097_original.jpg" },
+      { "image": "Images/b26cca8a_original.jpg" },
+      { "image": "Images/9ffc9672_original.jpg" },
+      { "image": "Images/50e138d6_original.jpg" },
+      { "image": "Images/eh.jpg" },
+      { "image": "Images/mit.png" }
     ],
     "clients": [
-      { "image": "Images/kawaii.png"},
-      { "image": "Images/6b147bfd_original.jpg"},
-      { "image": "Images/1e4786aa_original.jpg"},
-      { "image": "Images/ecfcf01c_original.jpg"},
-      { "image": "Images/8437c31d_original.jpg"},
-      { "image": "Images/ae383bc8_original.jpg"},
-      { "image": "Images/398e5c96_original.jpg"},
-      { "image": "Images/27c0df36_original.jpg"},
-      { "image": "Images/0b277623_original.jpg"},
-      { "image": "Images/f5ab0b3d_original.jpg"}
+      { "image": "Images/kawaii.png" },
+      { "image": "Images/6b147bfd_original.jpg" },
+      { "image": "Images/1e4786aa_original.jpg" },
+      { "image": "Images/ecfcf01c_original.jpg" },
+      { "image": "Images/8437c31d_original.jpg" },
+      { "image": "Images/ae383bc8_original.jpg" },
+      { "image": "Images/398e5c96_original.jpg" },
+      { "image": "Images/27c0df36_original.jpg" },
+      { "image": "Images/0b277623_original.jpg" },
+      { "image": "Images/f5ab0b3d_original.jpg" }
     ]
   },
 
   "videos": [
-    { "youtube_id": "W6mSfHxVWMQ"},
-    { "youtube_id": "Q9UG-JquF-8"},
-    { "youtube_id": "ux4woQQhShA"},
-    { "youtube_id": "UJr8EQ8OONs"},
-    { "youtube_id": "Ao8ZjQGBhsM"}
+    { "youtube_id": "W6mSfHxVWMQ" },
+    { "youtube_id": "Q9UG-JquF-8" },
+    { "youtube_id": "ux4woQQhShA" },
+    { "youtube_id": "UJr8EQ8OONs" },
+    { "youtube_id": "Ao8ZjQGBhsM" }
   ]
 }
