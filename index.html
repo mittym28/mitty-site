@@ -352,11 +352,34 @@
   /* VIDEOS */
   .videos-intro { text-align: center; color: var(--muted); font-size: 0.84rem; margin-bottom: 22px; line-height: 1.6; }
   .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
-  .video-embed {
+  .video-thumb {
     border-radius: 16px; overflow: hidden; aspect-ratio: 16/9;
     border: 2px solid var(--rose); box-shadow: 0 4px 0 var(--deep-rose);
+    position: relative; display: block; text-decoration: none;
+    transition: transform 0.18s, box-shadow 0.18s; cursor: pointer;
   }
-  .video-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+  .video-thumb:hover { transform: translateY(-3px); box-shadow: 0 8px 0 var(--deep-rose); }
+  .video-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .video-thumb-overlay {
+    position: absolute; inset: 0;
+    background: rgba(46, 26, 40, 0.35);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.18s;
+  }
+  .video-thumb:hover .video-thumb-overlay { background: rgba(46, 26, 40, 0.15); }
+  .video-play-btn {
+    width: 52px; height: 52px; background: var(--berry);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 0 #a0466a; transition: transform 0.18s;
+  }
+  .video-thumb:hover .video-play-btn { transform: scale(1.1); }
+  .video-play-btn svg { margin-left: 3px; }
+  .video-title-bar {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(46,26,40,0.75));
+    padding: 20px 12px 10px;
+    color: #fff; font-size: 0.78rem; font-weight: 700;
+  }
   .video-placeholder {
     width: 100%; height: 100%;
     background: linear-gradient(135deg, var(--blush), var(--lavender));
@@ -424,6 +447,82 @@
   }
   .lightbox-close:hover { transform: scale(1.1); }
 
+  /* QUEUE */
+  .queue-intro { text-align: center; color: var(--muted); font-size: 0.82rem; margin-bottom: 24px; font-style: italic; line-height: 1.6; }
+  .queue-config-notice {
+    background: linear-gradient(135deg, var(--lavender), var(--soft-mint));
+    border: 1.5px solid var(--periwinkle); border-radius: 14px;
+    padding: 16px 20px; font-size: 0.8rem; color: var(--dark); line-height: 1.8;
+    margin-bottom: 24px; text-align: center;
+  }
+  .queue-config-notice code {
+    background: var(--blush); color: var(--berry); border-radius: 6px;
+    padding: 2px 7px; font-size: 0.75rem;
+  }
+  .queue-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .queue-list {
+    border-radius: 18px; overflow: hidden;
+    border: 2px solid var(--rose); box-shadow: 0 4px 0 var(--deep-rose);
+  }
+  .queue-list-header {
+    padding: 11px 16px; font-family: 'Nunito', sans-serif;
+    font-size: 0.78rem; font-weight: 900; letter-spacing: 0.1em;
+    text-transform: uppercase; display: flex; align-items: center; gap: 7px;
+  }
+  .queue-list-header .count {
+    background: rgba(255,255,255,0.25); border-radius: 20px;
+    padding: 1px 8px; font-size: 0.7rem;
+  }
+  .queue-list[data-status="queue"]    .queue-list-header { background: var(--periwinkle); color: #3a2880; }
+  .queue-list[data-status="progress"] .queue-list-header { background: var(--rose);       color: var(--berry); }
+  .queue-list[data-status="done"]     .queue-list-header { background: var(--mint);        color: #2a6050; }
+  .queue-list[data-status="other"]    .queue-list-header { background: var(--blush);       color: var(--berry); }
+  body.dark .queue-list[data-status="queue"]    .queue-list-header { background: #2e2848; color: #c8c0f8; }
+  body.dark .queue-list[data-status="progress"] .queue-list-header { background: #4a2040; color: #f0a0c0; }
+  body.dark .queue-list[data-status="done"]     .queue-list-header { background: #1a3028; color: #80d0b0; }
+  body.dark .queue-list[data-status="other"]    .queue-list-header { background: #2a1824; color: #f0c0d8; }
+  .queue-cards { background: var(--cream); padding: 10px; display: flex; flex-direction: column; gap: 8px; min-height: 60px; }
+  .queue-card {
+    background: var(--card); border: 1.5px solid var(--blush);
+    border-radius: 10px; padding: 10px 12px;
+    font-size: 0.8rem; color: var(--dark); font-weight: 600;
+    box-shadow: 0 2px 0 var(--rose); transition: transform 0.15s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .queue-card:hover { transform: translateY(-1px); }
+  .queue-card-emoji { font-size: 0.85rem; flex-shrink: 0; }
+  .queue-empty {
+    text-align: center; color: var(--muted); font-size: 0.75rem;
+    font-style: italic; padding: 8px 0;
+  }
+  .queue-loading {
+    text-align: center; color: var(--muted); font-size: 0.82rem;
+    padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .queue-spinner {
+    width: 28px; height: 28px; border: 3px solid var(--blush);
+    border-top-color: var(--berry); border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .queue-error {
+    text-align: center; background: #fde8e8; border: 1.5px solid #f0b0b0;
+    border-radius: 14px; padding: 16px 20px; font-size: 0.82rem; color: #a04040;
+  }
+  body.dark .queue-error { background: #2a1010; border-color: #6a2020; color: #f0a0a0; }
+  .queue-refresh {
+    display: block; margin: 16px auto 0;
+    background: none; border: 2px solid var(--rose); border-radius: 20px;
+    color: var(--berry); font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.78rem; font-weight: 700; padding: 6px 16px; cursor: pointer;
+    transition: all 0.18s;
+  }
+  .queue-refresh:hover { background: var(--blush); transform: translateY(-1px); }
+
   /* FOOTER */
   footer {
     background: var(--berry); padding: 12px 24px;
@@ -476,6 +575,7 @@
       <button              onclick="switchTab('gallery', this)">♡ gallery</button>
       <button              onclick="switchTab('videos',  this)">▶ videos</button>
       <button              onclick="switchTab('tos',     this)">📋 tos</button>
+      <button              onclick="switchTab('queue',   this)">🎀 queue</button>
     </nav>
 
     <div class="content">
@@ -676,6 +776,17 @@
         </div>
       </div>
 
+      <!-- QUEUE -->
+      <div id="tab-queue" class="tab-panel">
+        <div class="queue-intro">♡ live commission queue — updates straight from my trello! ♡</div>
+        <div id="queue-body">
+          <div class="queue-loading">
+            <div class="queue-spinner"></div>
+            loading queue...
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <footer>✿ &nbsp; mitty's avatar edits &nbsp; · &nbsp; made with love ♡ &nbsp; ✿</footer>
@@ -691,7 +802,7 @@ const ICONS = {
   instagram: `<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`,
   kofi:      `<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>`,
   youtube:   `<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>`,
-  fiverr:    `<img src="https://companieslogo.com/img/orig/FVRR.D-1ec02e6b.png" style="width:36px;height:15px;object-fit:contain;">`,
+  fiverr:    `<img src="https://www.pngmart.com/files/23/Fiverr-Logo-PNG-Image.png" style="width:36px;height:15px;object-fit:contain;">`,
   trello:    `<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M21 0H3C1.343 0 0 1.343 0 3v18c0 1.656 1.343 3 3 3h18c1.656 0 3-1.344 3-3V3c0-1.657-1.344-3-3-3zM10.44 18.18c0 .795-.645 1.44-1.44 1.44H4.56c-.795 0-1.44-.645-1.44-1.44V4.56c0-.795.645-1.44 1.44-1.44H9c.795 0 1.44.645 1.44 1.44zm10.44-6c0 .794-.645 1.44-1.44 1.44H15c-.795 0-1.44-.646-1.44-1.44V4.56c0-.795.645-1.44 1.44-1.44h4.44c.795 0 1.44.645 1.44 1.44z"/></svg>`
 };
 
@@ -773,23 +884,26 @@ function renderVideos(cfg) {
   const grid = document.getElementById('video-grid');
   const videos = (cfg.videos || []).filter(v => v.youtube_id);
   if (!videos.length) {
-    grid.innerHTML = `<div class="video-embed"><div class="video-placeholder"><span>▶</span>add YouTube IDs to config.json ♡</div></div>`;
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:var(--muted);font-size:0.82rem;font-style:italic;padding:30px;">add YouTube video IDs to config.json ♡</div>`;
     return;
   }
-  const origin = encodeURIComponent(location.origin);
   grid.innerHTML = videos.map(v => `
-    <div class="video-embed">
-      <iframe src="https://www.youtube-nocookie.com/embed/${v.youtube_id}?origin=${origin}&rel=0"
-              title="${v.title || 'video'}" allowfullscreen
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </div>`).join('');
+    <a class="video-thumb" href="https://www.youtube.com/watch?v=${v.youtube_id}" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/${v.youtube_id}/hqdefault.jpg" alt="${v.title || 'video'}" loading="lazy">
+      <div class="video-thumb-overlay">
+        <div class="video-play-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      ${v.title ? `<div class="video-title-bar">${v.title}</div>` : ''}
+    </a>`).join('');
 }
 
 // ── Load config ───────────────────────────────────────────────────────────────
 fetch(`config.json?v=${CONFIG_VERSION}`)
   .then(r => { if (!r.ok) throw new Error('config.json not found'); return r.json(); })
   .then(cfg => {
+    window._cfg = cfg;
     renderHome(cfg);
     renderWorksGrid('prev-works-grid', cfg.previous_works, true);
     renderWorksGrid('gallery-friends', cfg.gallery.friends, true);
@@ -828,10 +942,113 @@ function switchTab(tab, btn) {
   document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + tab).classList.add('active');
   btn.classList.add('active');
+  if (tab === 'queue') loadQueue();
 }
 function switchTabByName(tab) {
-  const order = ['home','comm','gallery','videos','tos'];
+  const order = ['home','comm','gallery','videos','tos','queue'];
   switchTab(tab, document.querySelectorAll('nav button')[order.indexOf(tab)]);
+}
+
+// ── Trello queue ──────────────────────────────────────────────────────────────
+// Fill these in! Your Trello API key and board ID go in config.json
+// Board ID: the short code in your board URL → trello.com/b/XXXXXX/board-name
+// API key:  get yours free at https://trello.com/power-ups/admin
+
+const LIST_STATUS = {
+  // Maps your exact Trello list names (lowercase) to a style category
+  // Edit these to match your actual list names!
+  'queue':       'queue',
+  'in progress': 'progress',
+  'done':        'done',
+};
+const LIST_ICONS = { queue: '🎀', progress: '✦', done: '✿', other: '♡' };
+const LIST_LABELS = { queue: 'Queue', progress: 'In Progress', done: 'Done', other: 'Other' };
+const CARD_EMOJIS = ['🌸','✦','♡','✿','★','🌷','✨','🎀','🎀','🌸'];
+
+function getListStatus(name) {
+  return LIST_STATUS[name.toLowerCase()] || 'other';
+}
+
+function renderQueue(lists, cardsMap) {
+  if (!lists.length) {
+    document.getElementById('queue-body').innerHTML =
+      `<div class="queue-error">no lists found — double check your board ID and API key in config.json ♡</div>`;
+    return;
+  }
+  const html = `
+    <div class="queue-board">
+      ${lists.map(list => {
+        const cards = cardsMap[list.id] || [];
+        const status = getListStatus(list.name);
+        const cardsHtml = cards.length
+          ? cards.map((c, i) => `
+              <div class="queue-card">
+                <span class="queue-card-emoji">${CARD_EMOJIS[i % CARD_EMOJIS.length]}</span>
+                ${escHtml(c.name)}
+              </div>`).join('')
+          : `<div class="queue-empty">nothing here yet! ♡</div>`;
+        return `
+          <div class="queue-list" data-status="${status}">
+            <div class="queue-list-header">
+              ${LIST_ICONS[status]} ${escHtml(list.name)}
+              <span class="count">${cards.length}</span>
+            </div>
+            <div class="queue-cards">${cardsHtml}</div>
+          </div>`;
+      }).join('')}
+    </div>
+    <button class="queue-refresh" onclick="loadQueue(true)">↻ refresh</button>`;
+  document.getElementById('queue-body').innerHTML = html;
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+let queueLoaded = false;
+async function loadQueue(force = false) {
+  if (queueLoaded && !force) return;
+
+  // Get config from already-loaded cfg (set in window after config fetch)
+  const apiKey   = window._cfg?.trello?.api_key;
+  const boardId  = window._cfg?.trello?.board_id;
+
+  if (!apiKey || apiKey === 'YOUR_API_KEY' || !boardId || boardId === 'YOUR_BOARD_ID') {
+    document.getElementById('queue-body').innerHTML = `
+      <div class="queue-config-notice">
+        to enable the live queue, add your trello details to <code>config.json</code>:<br><br>
+        <code>"trello": { "api_key": "YOUR_API_KEY", "board_id": "YOUR_BOARD_ID" }</code><br><br>
+        get your free api key at <a href="https://trello.com/power-ups/admin" target="_blank" style="color:var(--berry)">trello.com/power-ups/admin</a><br>
+        your board id is the short code in your board url ♡
+      </div>`;
+    return;
+  }
+
+  document.getElementById('queue-body').innerHTML =
+    `<div class="queue-loading"><div class="queue-spinner"></div>loading queue...</div>`;
+
+  try {
+    const base = `https://api.trello.com/1`;
+    const auth = `key=${apiKey}`;
+
+    // Fetch lists
+    const listsRes = await fetch(`${base}/boards/${boardId}/lists?${auth}&fields=id,name`);
+    if (!listsRes.ok) throw new Error(`Trello API error: ${listsRes.status}`);
+    const lists = await listsRes.json();
+
+    // Fetch cards for each list in parallel
+    const cardFetches = lists.map(l =>
+      fetch(`${base}/lists/${l.id}/cards?${auth}&fields=id,name`).then(r => r.json()).then(cards => [l.id, cards])
+    );
+    const cardResults = await Promise.all(cardFetches);
+    const cardsMap = Object.fromEntries(cardResults);
+
+    renderQueue(lists, cardsMap);
+    queueLoaded = true;
+  } catch (err) {
+    document.getElementById('queue-body').innerHTML =
+      `<div class="queue-error">couldn't load trello board 😢<br><small>${escHtml(err.message)}</small><br><button class="queue-refresh" onclick="loadQueue(true)" style="margin-top:10px">try again ↻</button></div>`;
+  }
 }
 function switchPrice(tier, btn) {
   document.querySelectorAll('.price-panel').forEach(p => p.classList.remove('active'));
