@@ -889,7 +889,12 @@ function renderVideos(cfg) {
   }
   grid.innerHTML = videos.map(v => `
     <a class="video-thumb" href="https://www.youtube.com/watch?v=${v.youtube_id}" target="_blank" rel="noopener">
-      <img src="https://i.ytimg.com/vi/${v.youtube_id}/hqdefault.jpg" alt="${v.title || 'video'}" loading="lazy">
+      <img
+        src="https://img.youtube.com/vi/${v.youtube_id}/mqdefault.jpg"
+        alt="${v.title || 'video'}"
+        loading="lazy"
+        onerror="this.src='https://img.youtube.com/vi/${v.youtube_id}/default.jpg'"
+      >
       <div class="video-thumb-overlay">
         <div class="video-play-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
@@ -1009,17 +1014,18 @@ let queueLoaded = false;
 async function loadQueue(force = false) {
   if (queueLoaded && !force) return;
 
-  // Get config from already-loaded cfg (set in window after config fetch)
-  const apiKey   = window._cfg?.trello?.api_key;
-  const boardId  = window._cfg?.trello?.board_id;
+  const apiKey  = window._cfg?.trello?.api_key;
+  const token   = window._cfg?.trello?.token;
+  const boardId = window._cfg?.trello?.board_id;
 
-  if (!apiKey || apiKey === 'YOUR_API_KEY' || !boardId || boardId === 'YOUR_BOARD_ID') {
+  if (!apiKey || apiKey === 'YOUR_API_KEY_HERE' || !token || token === 'YOUR_TOKEN_HERE' || !boardId || boardId === 'YOUR_BOARD_ID') {
     document.getElementById('queue-body').innerHTML = `
       <div class="queue-config-notice">
         to enable the live queue, add your trello details to <code>config.json</code>:<br><br>
-        <code>"trello": { "api_key": "YOUR_API_KEY", "board_id": "YOUR_BOARD_ID" }</code><br><br>
-        get your free api key at <a href="https://trello.com/power-ups/admin" target="_blank" style="color:var(--berry)">trello.com/power-ups/admin</a><br>
-        your board id is the short code in your board url ♡
+        <code>"trello": { "api_key": "...", "token": "...", "board_id": "..." }</code><br><br>
+        <strong>api key:</strong> go to <a href="https://trello.com/power-ups/admin" target="_blank" style="color:var(--berry)">trello.com/power-ups/admin</a>, create a power-up, copy the API key<br><br>
+        <strong>token:</strong> on that same page click <em>"Token"</em> next to your API key, allow access, then copy the token<br><br>
+        <strong>board id:</strong> already filled in from your trello url ♡
       </div>`;
     return;
   }
@@ -1029,11 +1035,11 @@ async function loadQueue(force = false) {
 
   try {
     const base = `https://api.trello.com/1`;
-    const auth = `key=${apiKey}`;
+    const auth = `key=${apiKey}&token=${token}`;
 
     // Fetch lists
     const listsRes = await fetch(`${base}/boards/${boardId}/lists?${auth}&fields=id,name`);
-    if (!listsRes.ok) throw new Error(`Trello API error: ${listsRes.status}`);
+    if (!listsRes.ok) throw new Error(`Trello API error ${listsRes.status} — double check your API key and token ♡`);
     const lists = await listsRes.json();
 
     // Fetch cards for each list in parallel
