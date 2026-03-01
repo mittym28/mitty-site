@@ -534,6 +534,33 @@
   }
   .queue-refresh:hover { background: var(--blush); transform: translateY(-1px); }
 
+  /* FAQ */
+  .faq-item {
+    background: var(--cream); border: 2px solid var(--rose);
+    border-radius: 16px; margin-bottom: 10px; overflow: hidden;
+    box-shadow: 0 3px 0 var(--rose); transition: var(--transition);
+  }
+  .faq-question {
+    width: 100%; background: none; border: none; text-align: left;
+    padding: 14px 18px; cursor: pointer; display: flex; justify-content: space-between;
+    align-items: center; gap: 12px;
+    font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 0.84rem;
+    font-weight: 700; color: var(--berry); transition: background 0.18s;
+  }
+  .faq-question:hover { background: var(--blush); }
+  .faq-chevron {
+    flex-shrink: 0; font-size: 0.7rem; color: var(--rose);
+    transition: transform 0.25s; display: inline-block;
+  }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    font-size: 0.82rem; color: var(--dark); line-height: 1.7;
+    padding: 0 18px;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; padding: 0 18px 16px; }
+
   /* FOOTER */
   footer {
     background: var(--berry); padding: 12px 24px;
@@ -581,12 +608,11 @@
 
   <div class="card">
     <nav>
-      <button class="active" onclick="switchTab('home',    this)">🏠 home</button>
+      <button class="active" onclick="switchTab('home',    this)">✦ home</button>
       <button              onclick="switchTab('comm',    this)">✦ comm info</button>
-      <button              onclick="switchTab('gallery', this)">♡ gallery</button>
-      <button              onclick="switchTab('videos',  this)">▶ videos</button>
-      <button              onclick="switchTab('tos',     this)">📋 tos</button>
-      <button              onclick="switchTab('queue',   this)">🎀 queue</button>
+      <button              onclick="switchTab('gallery', this)">✦ gallery</button>
+      <button              onclick="switchTab('tos',     this)">✦ tos</button>
+      <button              onclick="switchTab('queue',   this)">✦ queue</button>
     </nav>
 
     <div class="content">
@@ -730,10 +756,7 @@
           <div class="section-heading">clients</div>
           <div class="works-grid" id="gallery-clients"></div>
         </div>
-      </div>
-
-      <!-- VIDEOS -->
-      <div id="tab-videos" class="tab-panel">
+        <div class="kawaii-divider">✦ avatar showcases ✦</div>
         <div class="videos-intro">♡ my edited avatars dancing to music ♡</div>
         <div class="video-grid" id="video-grid"></div>
       </div>
@@ -784,6 +807,48 @@
 
         <div class="tos-note">
           ♡ if you have any questions about what's allowed, feel free to ask before ordering! i'm happy to help ♡
+        </div>
+
+        <div class="kawaii-divider">✦ faq ✦</div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can you model an avatar for me from scratch?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">No, I cannot model an avatar. I can only edit avatars using pre-existing assets commonly found on Booth. If you're looking for a fully custom model, you'd need a 3D modeler!</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is a Mamefriend?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">The Mamefriend series are avatars based on the Mamehinata avatar, all sharing the same body. Because of this, all clothing made for Mamehinata is compatible with any avatar in the Mamefriend series!</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can you edit an avatar based on a reference image of my OC?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">Of course! Though some assets won't be an exact match, they'll be chosen to look as close as possible to your reference. Feel free to share it when you reach out ♡</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long do commissions usually take?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">I strive to get avatars done within 7 to 10 days. If the avatar is on the simpler side it'll likely be done sooner! You can always check the Queue tab for a live look at my progress.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is GogoLoco?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">GogoLoco is a tool added to your menu wheel in VRChat that lets you sit, float, lay down, and more. It's included with every order! It's especially handy if your avatar is too short to reach something, just float up ♡</div>
         </div>
       </div>
 
@@ -961,7 +1026,7 @@ function switchTab(tab, btn) {
   if (tab === 'queue') loadQueue();
 }
 function switchTabByName(tab) {
-  const order = ['home','comm','gallery','videos','tos','queue'];
+  const order = ['home','comm','gallery','tos','queue'];
   switchTab(tab, document.querySelectorAll('nav button')[order.indexOf(tab)]);
 }
 
@@ -1069,6 +1134,14 @@ async function loadQueue(force = false) {
       `<div class="queue-error">couldn't load trello board 😢<br><small>${escHtml(err.message)}</small><br><button class="queue-refresh" onclick="loadQueue(true)" style="margin-top:10px">try again ↻</button></div>`;
   }
 }
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  // Close all others
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
 function switchPrice(tier, btn) {
   document.querySelectorAll('.price-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.price-tab-btn').forEach(b => b.classList.remove('active'));
