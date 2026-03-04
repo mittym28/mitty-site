@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Kipfel",
+    "image": "https://drive.google.com/uc?export=view&id=1FQpcowvUxaDSz6wwjFbRNMScJ42bKRDq",
+    "notes": "Works with all Mamehinata clothing.",
+    "tags": ["Mamefriend"],
+    "booth_url": "https://booth.pm/en/items/XXXXXXX"
+  },
+  {
+    "name": "Another Avatar",
+    "image": "Images/avatars/another.png",
+    "notes": "Quest compatible with the cross-compatibility add-on.",
+    "tags": ["Quest"],
+    "booth_url": "https://booth.pm/en/items/XXXXXXX"
+  },
+  {
+    "name": "No Tags Example",
+    "image": "Images/avatars/notagsexample.png",
+    "notes": "Standard PC-only avatar.",
+    "tags": [],
+    "booth_url": "https://booth.pm/en/items/XXXXXXX"
+  }
+]

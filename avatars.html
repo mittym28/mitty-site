@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mitty's avatar list ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fff8fa;
+    --blush: #ffd6e7;
+    --rose: #ffb3d1;
+    --deep-rose: #e8799e;
+    --berry: #c45c82;
+    --soft-mint: #d4f0e8;
+    --mint: #a8dfc8;
+    --lavender: #ede0f7;
+    --periwinkle: #c8c4f0;
+    --dark: #2e1a28;
+    --muted: #8a6070;
+    --card: #fffafc;
+    --transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  body.dark {
+    --cream: #1e1220; --blush: #2a1a24; --rose: #6b3050;
+    --deep-rose: #c4618a; --berry: #e07aa0; --soft-mint: #1a2e28;
+    --mint: #2a4a40; --lavender: #231830; --periwinkle: #2e2848;
+    --dark: #f0d8e8; --muted: #c09ab0; --card: #1a1018;
+  }
+  body.dark { background: #120c10; }
+  body.dark::before {
+    background-image:
+      radial-gradient(circle at 20% 20%, #2a1020 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, #0e1424 0%, transparent 50%);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background: var(--blush);
+    min-height: 100vh;
+    padding: 36px 16px 60px;
+    position: relative; overflow-x: hidden;
+    transition: var(--transition);
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, #ffe4f0 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, #e8f4ff 0%, transparent 50%),
+      radial-gradient(circle at 60% 10%, #f0ffe8 0%, transparent 40%);
+  }
+  .bg-deco { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+  .star { position: absolute; font-size: 1rem; opacity: 0.35; animation: floatStar 6s ease-in-out infinite; }
+  @keyframes floatStar {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(15deg); }
+  }
+
+  .page { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; }
+
+  /* HEADER */
+  .header {
+    background: var(--berry); border-radius: 20px 20px 0 0;
+    padding: 18px 28px 16px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    transition: var(--transition);
+  }
+  .header-left h1 {
+    font-family: 'Nunito', sans-serif; font-size: 1.4rem; font-weight: 900;
+    color: #fff; letter-spacing: 0.02em;
+  }
+  .header-left p { font-size: 0.75rem; color: #ffd6e7; margin-top: 2px; }
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  .count-badge {
+    background: rgba(255,255,255,0.2); color: #fff;
+    border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; font-weight: 700;
+  }
+  .back-btn {
+    background: rgba(255,255,255,0.15); border: 1.5px solid rgba(255,255,255,0.3);
+    color: #fff; border-radius: 12px; padding: 6px 14px;
+    font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 0.75rem; font-weight: 700;
+    cursor: pointer; text-decoration: none; transition: background 0.18s;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.25); }
+
+  /* BODY CARD */
+  .body-card {
+    background: var(--card);
+    border: 2px solid var(--rose); border-top: none;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 0 var(--deep-rose), 0 8px 40px rgba(196,92,130,0.18);
+    padding: 28px 28px 36px;
+    transition: var(--transition);
+  }
+
+  /* SEARCH + FILTER BAR */
+  .controls {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; align-items: center;
+  }
+  .search-wrap {
+    flex: 1; min-width: 180px; position: relative;
+  }
+  .search-wrap::before {
+    content: '✦'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+    color: var(--rose); font-size: 0.7rem; pointer-events: none;
+  }
+  .search-input {
+    width: 100%; background: var(--cream); border: 2px solid var(--rose);
+    border-radius: 14px; padding: 9px 14px 9px 30px;
+    font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 0.82rem;
+    color: var(--dark); outline: none; transition: border-color 0.18s, var(--transition);
+  }
+  .search-input:focus { border-color: var(--berry); }
+  .search-input::placeholder { color: var(--muted); }
+  .filter-btn {
+    background: var(--cream); border: 2px solid var(--blush);
+    border-radius: 12px; padding: 8px 14px; font-size: 0.75rem; font-weight: 700;
+    color: var(--muted); cursor: pointer; white-space: nowrap;
+    font-family: 'M PLUS Rounded 1c', sans-serif; transition: all 0.18s;
+    box-shadow: 0 2px 0 var(--rose);
+  }
+  .filter-btn.active { background: var(--berry); color: #fff; border-color: var(--berry); box-shadow: 0 2px 0 #a0466a; }
+  .filter-btn:hover:not(.active) { background: var(--blush); color: var(--berry); }
+
+  /* AVATAR GRID */
+  .avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .avatar-card {
+    background: var(--cream); border: 2px solid var(--rose);
+    border-radius: 18px; overflow: hidden;
+    box-shadow: 0 4px 0 var(--deep-rose);
+    transition: transform 0.18s, box-shadow 0.18s, var(--transition);
+    display: flex; flex-direction: column;
+  }
+  .avatar-card:hover { transform: translateY(-4px); box-shadow: 0 8px 0 var(--deep-rose); }
+  .avatar-card.hidden { display: none; }
+
+  .avatar-img-wrap {
+    aspect-ratio: 3/4; overflow: hidden; position: relative; background: var(--blush);
+  }
+  .avatar-img-wrap img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.3s;
+  }
+  .avatar-card:hover .avatar-img-wrap img { transform: scale(1.04); }
+  .avatar-img-placeholder {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--blush), var(--lavender));
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; font-size: 0.75rem; color: var(--muted);
+  }
+  .avatar-img-placeholder span { font-size: 2rem; }
+
+  .avatar-info { padding: 12px 14px 14px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+  .avatar-name {
+    font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 900;
+    color: var(--dark); line-height: 1.2;
+  }
+  .avatar-notes {
+    font-size: 0.75rem; color: var(--muted); line-height: 1.5; flex: 1;
+  }
+  .avatar-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .avatar-tag {
+    background: var(--lavender); color: #6045a0; border-radius: 8px;
+    padding: 2px 8px; font-size: 0.68rem; font-weight: 700;
+    border: 1.5px solid var(--periwinkle);
+  }
+  .avatar-tag.mamefriend { background: #ffeef6; color: var(--berry); border-color: var(--rose); }
+  .avatar-tag.quest      { background: var(--soft-mint); color: #2a6050; border-color: var(--mint); }
+  .buy-btn {
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+    margin-top: 10px; background: var(--berry); color: #fff; border: none;
+    border-radius: 10px; padding: 8px; font-size: 0.75rem; font-weight: 700;
+    font-family: 'M PLUS Rounded 1c', sans-serif; text-decoration: none;
+    box-shadow: 0 3px 0 #a0466a; transition: all 0.15s; cursor: pointer;
+  }
+  .buy-btn:hover { background: var(--deep-rose); transform: translateY(-1px); box-shadow: 0 5px 0 #a0466a; }
+
+  /* EMPTY STATE */
+  .empty-state {
+    grid-column: 1 / -1; text-align: center;
+    padding: 48px 20px; color: var(--muted); font-size: 0.85rem;
+  }
+  .empty-state span { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+  /* DARK TOGGLE */
+  .dark-toggle {
+    position: fixed; bottom: 20px; right: 20px; z-index: 100;
+    background: var(--berry); border: none; border-radius: 50%;
+    width: 44px; height: 44px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; box-shadow: 0 4px 0 #a0466a, 0 4px 16px rgba(0,0,0,0.2);
+    transition: transform 0.18s, box-shadow 0.18s, background 0.3s;
+  }
+  .dark-toggle:hover { transform: translateY(-2px) scale(1.08); }
+  .dark-toggle:active { transform: translateY(1px); }
+  body.dark .dark-toggle { background: #4a2840; box-shadow: 0 4px 0 #2a1428, 0 4px 16px rgba(0,0,0,0.5); }
+
+  @media (max-width: 500px) {
+    .avatar-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .body-card { padding: 18px 14px 28px; }
+    .header { padding: 14px 16px; }
+    .header-left h1 { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<button class="dark-toggle" id="dark-toggle" onclick="toggleDark()" title="toggle dark mode">🌙</button>
+
+<div class="bg-deco">
+  <span class="star" style="top:5%;  left:4%;  animation-delay:0s">✦</span>
+  <span class="star" style="top:15%; left:92%; animation-delay:1s">✿</span>
+  <span class="star" style="top:40%; left:2%;  animation-delay:2s">♡</span>
+  <span class="star" style="top:70%; left:95%; animation-delay:0.5s">✦</span>
+  <span class="star" style="top:85%; left:8%;  animation-delay:1.5s">✿</span>
+  <span class="star" style="top:60%; left:90%; animation-delay:3s">♡</span>
+</div>
+
+<div class="page">
+  <div class="header">
+    <div class="header-left">
+      <h1>✦ compatible avatar list ♡</h1>
+      <p>for friends only — please don't share this link!</p>
+    </div>
+    <div class="header-right">
+      <span class="count-badge" id="count-badge">loading...</span>
+      <a href="index.html" class="back-btn">← back to site</a>
+    </div>
+  </div>
+
+  <div class="body-card">
+    <div class="controls">
+      <div class="search-wrap">
+        <input class="search-input" id="search" type="text" placeholder="search avatars..." oninput="filterAvatars()">
+      </div>
+      <button class="filter-btn active" data-filter="all"           onclick="setFilter('all', this)">all</button>
+      <button class="filter-btn"        data-filter="mamefriend"    onclick="setFilter('mamefriend', this)">mamefriend</button>
+      <button class="filter-btn"        data-filter="quest"         onclick="setFilter('quest', this)">quest ok</button>
+    </div>
+
+    <div class="avatar-grid" id="avatar-grid">
+      <div class="empty-state"><span>✿</span>loading avatars...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Dark mode ─────────────────────────────────────────────────────────────────
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark');
+  localStorage.setItem('mitty-dark', isDark ? '1' : '0');
+  document.getElementById('dark-toggle').textContent = isDark ? '☀️' : '🌙';
+}
+(function() {
+  const saved = localStorage.getItem('mitty-dark');
+  if (saved === '1') {
+    document.body.classList.add('dark');
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('dark-toggle');
+      if (btn) btn.textContent = '☀️';
+    });
+  }
+})();
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let allAvatars = [];
+let currentFilter = 'all';
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function renderAvatars(avatars) {
+  const grid = document.getElementById('avatar-grid');
+  if (!avatars.length) {
+    grid.innerHTML = `<div class="empty-state"><span>✿</span>no avatars found ♡</div>`;
+    return;
+  }
+  grid.innerHTML = avatars.map(a => {
+    const tags = (a.tags || []).map(t =>
+      `<span class="avatar-tag ${t.toLowerCase()}">${t}</span>`
+    ).join('');
+    const img = a.image
+      ? `<img src="${a.image}" alt="${a.name}" loading="lazy">`
+      : `<div class="avatar-img-placeholder"><span>✿</span>no image</div>`;
+    const buyBtn = a.booth_url
+      ? `<a class="buy-btn" href="${a.booth_url}" target="_blank" rel="noopener">✦ view on booth</a>`
+      : '';
+    return `
+      <div class="avatar-card" data-name="${a.name.toLowerCase()}" data-tags="${(a.tags||[]).join(',').toLowerCase()}">
+        <div class="avatar-img-wrap">${img}</div>
+        <div class="avatar-info">
+          <div class="avatar-name">${a.name}</div>
+          ${a.notes ? `<div class="avatar-notes">${a.notes}</div>` : ''}
+          ${tags ? `<div class="avatar-tags">${tags}</div>` : ''}
+          ${buyBtn}
+        </div>
+      </div>`;
+  }).join('');
+  updateCount();
+}
+
+function updateCount() {
+  const visible = document.querySelectorAll('.avatar-card:not(.hidden)').length;
+  const total   = document.querySelectorAll('.avatar-card').length;
+  document.getElementById('count-badge').textContent =
+    visible === total ? `${total} avatars` : `${visible} / ${total} avatars`;
+}
+
+// ── Filter + search ───────────────────────────────────────────────────────────
+function filterAvatars() {
+  const query = document.getElementById('search').value.toLowerCase().trim();
+  document.querySelectorAll('.avatar-card').forEach(card => {
+    const nameMatch = card.dataset.name.includes(query);
+    const tagMatch  = currentFilter === 'all' || card.dataset.tags.includes(currentFilter);
+    card.classList.toggle('hidden', !(nameMatch && tagMatch));
+  });
+  updateCount();
+  checkEmpty();
+}
+
+function setFilter(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterAvatars();
+}
+
+function checkEmpty() {
+  const grid    = document.getElementById('avatar-grid');
+  const visible = document.querySelectorAll('.avatar-card:not(.hidden)').length;
+  const already = grid.querySelector('.empty-state');
+  if (visible === 0 && !already) {
+    const el = document.createElement('div');
+    el.className = 'empty-state';
+    el.innerHTML = '<span>✿</span>no avatars match that search ♡';
+    grid.appendChild(el);
+  } else if (visible > 0 && already) {
+    already.remove();
+  }
+}
+
+// ── Load ──────────────────────────────────────────────────────────────────────
+fetch('avatars.json')
+  .then(r => { if (!r.ok) throw new Error('avatars.json not found'); return r.json(); })
+  .then(data => {
+    allAvatars = data;
+    renderAvatars(data);
+  })
+  .catch(() => {
+    document.getElementById('avatar-grid').innerHTML = `
+      <div class="empty-state">
+        <span>✿</span>
+        create an <strong>avatars.json</strong> file in your repo to get started ♡
+      </div>`;
+    document.getElementById('count-badge').textContent = '0 avatars';
+  });
+</script>
+</body>
+</html>
