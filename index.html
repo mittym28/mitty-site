@@ -461,11 +461,8 @@
   }
   .queue-board {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
-  }
-  @media (max-width: 700px) {
-    .queue-board { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 420px) {
     .queue-board { grid-template-columns: 1fr; }
@@ -994,27 +991,23 @@ fetch(`config.json?v=${CONFIG_VERSION}`)
   })
   .catch(err => console.warn('Could not load config.json:', err.message));
 
-// ── Dark mode ─────────────────────────────────────────────────────────────────
+// ── Dark mode (dark is default) ───────────────────────────────────────────────
 function toggleDark() {
   const isDark = document.body.classList.toggle('dark');
   localStorage.setItem('mitty-dark', isDark ? '1' : '0');
   document.getElementById('dark-toggle').textContent = isDark ? '☀️' : '🌙';
 }
-// Apply saved preference immediately
+// Dark is ON by default — only turn it off if user explicitly chose light
 (function() {
   const saved = localStorage.getItem('mitty-dark');
-  if (saved === '1') {
-    document.body.classList.add('dark');
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('dark-toggle');
-      if (btn) btn.textContent = '☀️';
-    });
-  }
-  // If script runs after DOM is ready, update button right away
-  if (document.readyState !== 'loading' && saved === '1') {
+  const useDark = saved === null || saved === '1';
+  if (useDark) document.body.classList.add('dark');
+  function updateBtn() {
     const btn = document.getElementById('dark-toggle');
-    if (btn) btn.textContent = '☀️';
+    if (btn) btn.textContent = useDark ? '☀️' : '🌙';
   }
+  if (document.readyState !== 'loading') { updateBtn(); }
+  else { document.addEventListener('DOMContentLoaded', updateBtn); }
 })();
 
 // ── Navigation ────────────────────────────────────────────────────────────────
@@ -1036,44 +1029,41 @@ function switchTabByName(tab) {
 // API key:  get yours free at https://trello.com/power-ups/admin
 
 const LIST_STATUS = {
-  'to do':          'queue',
-  'wip':            'progress',
-  'done':           'done',
-  'done (clients)': 'done',
+  'to do': 'queue',
+  'wip':   'progress',
 };
-const LIST_ICONS = { queue: '🎀', progress: '✦', done: '✿', other: '♡' };
-const LIST_LABELS = { queue: 'Queue', progress: 'In Progress', done: 'Done', other: 'Other' };
+const LIST_ICONS  = { queue: '🎀', progress: '✦' };
 const CARD_EMOJIS = ['🌸','✦','♡','✿','★','🌷','✨','🎀','🎀','🌸'];
+
+// Only show these two lists — everything else is hidden
+const VISIBLE_LISTS = ['to do', 'wip'];
 
 function getListStatus(name) {
   return LIST_STATUS[name.toLowerCase()] || 'other';
 }
 
 function renderQueue(lists, cardsMap) {
-  if (!lists.length) {
+  // Filter to only To Do and WIP
+  const filtered = lists.filter(l => VISIBLE_LISTS.includes(l.name.toLowerCase()));
+
+  if (!filtered.length) {
     document.getElementById('queue-body').innerHTML =
-      `<div class="queue-error">no lists found — double check your board ID in config.json ♡</div>`;
+      `<div class="queue-error">couldn't find To Do or WIP lists — make sure your board is public ♡</div>`;
     return;
   }
   const html = `
     <div class="queue-board">
-      ${lists.map(list => {
+      ${filtered.map(list => {
         const cards = cardsMap[list.id] || [];
         const status = getListStatus(list.name);
         const cardsHtml = cards.length
-          ? cards.map((c, i) => {
-              const cover = c.cover?.scaled?.find(s => s.width >= 200)?.url
-                         || c.cover?.url
-                         || null;
-              return `
-                <div class="queue-card">
-                  ${cover ? `<img class="queue-card-cover" src="${cover}" alt="" loading="lazy">` : ''}
-                  <div class="queue-card-body">
-                    <span class="queue-card-emoji">${CARD_EMOJIS[i % CARD_EMOJIS.length]}</span>
-                    ${escHtml(c.name)}
-                  </div>
-                </div>`;
-            }).join('')
+          ? cards.map((c, i) => `
+              <div class="queue-card">
+                <div class="queue-card-body">
+                  <span class="queue-card-emoji">${CARD_EMOJIS[i % CARD_EMOJIS.length]}</span>
+                  ${escHtml(c.name)}
+                </div>
+              </div>`).join('')
           : `<div class="queue-empty">nothing here yet! ♡</div>`;
         return `
           <div class="queue-list" data-status="${status}">
