@@ -1,24 +1,5 @@
 {
-  "avatars": [
-    {
-      "name": "Manuka",
-      "booth_id": "3718931",
-      "tags": ["Feminine"],
-      "shares_body_with": ["Minase", "Kikyo"],
-      "notes": "Popular feminine base. Most GIRLS clothes are made for this body."
-    },
-    {
-      "name": "Mamehinata",
-      "booth_id": "4374930",
-      "tags": ["Mamefriend"],
-      "shares_body_with": ["Airi", "Binah", "Chiffon", "Eku"]
-    },
-    {
-      "name": "Airi",
-      "booth_id": "6082686",
-      "tags": ["Mamefriend"],
-      "shares_body_with": ["Mamehinata", "Binah", "Chiffon", "Eku"]
-    {
+  "avatars": [],
   "clothes": [
     {
       "name": "Backless Halter Neck",
@@ -9530,42 +9511,8 @@
     }
   ],
 
-  "hair": [
-    {
-      "name": "Example Hair",
-      "booth_id": "1111111",
-      "notes": "Universal fit — works on any avatar."
-    }
-  ],
-
-  "addons": [
-    {
-      "name": "Example Addon",
-      "booth_id": "2222222",
-      "tags": ["Manuka"],
-      "notes": "Wings addon. Compatible with Manuka body."
-    }
-  ],
-
-  "textures": [
-    {
-      "name": "Example Eye Texture",
-      "booth_id": "3333333",
-      "tags": ["Eyes"],
-      "notes": "8 color variants included."
-    },
-    {
-      "name": "Example Skin Recolor",
-      "booth_id": "4444444",
-      "tags": ["Recolor", "Makeup"]
-    }
-  ],
-
-  "misc": [
-    {
-      "name": "Example Misc Item",
-      "booth_id": "5555555",
-      "notes": "Prop or accessory that doesn't fit other categories."
-    }
-  ]
+  "hair": [],
+  "addons": [],
+  "textures": [],
+  "misc": []
 }
