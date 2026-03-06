@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mitty's asset list ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:#fff8fa; --blush:#ffd6e7; --rose:#ffb3d1; --deep-rose:#e8799e;
+    --berry:#c45c82; --soft-mint:#d4f0e8; --mint:#a8dfc8; --lavender:#ede0f7;
+    --periwinkle:#c8c4f0; --dark:#2e1a28; --muted:#8a6070; --card:#fffafc;
+    --transition:background 0.3s, color 0.3s, border-color 0.3s;
+  }
+  body.dark {
+    --cream:#1e1220; --blush:#2a1a24; --rose:#6b3050; --deep-rose:#c4618a;
+    --berry:#e07aa0; --soft-mint:#1a2e28; --mint:#2a4a40; --lavender:#231830;
+    --periwinkle:#2e2848; --dark:#f0d8e8; --muted:#c09ab0; --card:#1a1018;
+  }
+  body.dark { background:#120c10 !important; }
+  body.dark::before {
+    background-image:
+      radial-gradient(circle at 20% 20%,#2a1020 0%,transparent 50%),
+      radial-gradient(circle at 80% 80%,#0e1424 0%,transparent 50%) !important;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    font-family:'M PLUS Rounded 1c',sans-serif; background:var(--blush);
+    min-height:100vh; padding:36px 16px 60px; position:relative;
+    overflow-x:hidden; transition:var(--transition);
+  }
+  body::before {
+    content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(circle at 20% 20%,#ffe4f0 0%,transparent 50%),
+      radial-gradient(circle at 80% 80%,#e8f4ff 0%,transparent 50%),
+      radial-gradient(circle at 60% 10%,#f0ffe8 0%,transparent 40%);
+  }
+  .bg-deco { position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
+  .star { position:absolute; font-size:1rem; opacity:0.35; animation:floatStar 6s ease-in-out infinite; }
+  @keyframes floatStar { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-10px) rotate(15deg)} }
+
+  .page { position:relative; z-index:1; max-width:1040px; margin:0 auto; }
+
+  /* HEADER */
+  .header {
+    background:var(--berry); border-radius:20px 20px 0 0;
+    padding:16px 24px; display:flex; align-items:center;
+    justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+  .header h1 { font-family:'Nunito',sans-serif; font-size:1.3rem; font-weight:900; color:#fff; }
+  .header p  { font-size:0.72rem; color:#ffd6e7; margin-top:2px; }
+  .header-right { display:flex; align-items:center; gap:8px; }
+  .count-badge {
+    background:rgba(255,255,255,0.2); color:#fff;
+    border-radius:20px; padding:4px 12px; font-size:0.73rem; font-weight:700;
+  }
+  .back-btn {
+    background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3);
+    color:#fff; border-radius:12px; padding:6px 14px;
+    font-family:'M PLUS Rounded 1c',sans-serif; font-size:0.73rem; font-weight:700;
+    text-decoration:none; transition:background 0.18s;
+  }
+  .back-btn:hover { background:rgba(255,255,255,0.28); }
+
+  /* BODY CARD */
+  .body-card {
+    background:var(--card); border:2px solid var(--rose); border-top:none;
+    border-radius:0 0 24px 24px;
+    box-shadow:0 4px 0 var(--deep-rose),0 8px 40px rgba(196,92,130,0.18);
+    overflow:hidden; transition:var(--transition);
+  }
+
+  /* CATEGORY TABS */
+  .cat-tabs {
+    display:flex; background:var(--cream); border-bottom:2px solid var(--blush);
+    position:relative; overflow-x:auto; scrollbar-width:none;
+  }
+  .cat-tabs::-webkit-scrollbar { display:none; }
+  .cat-tabs::after {
+    content:''; position:absolute; bottom:-2px; left:0; right:0; height:2px;
+    background:linear-gradient(90deg,var(--rose),var(--periwinkle),var(--mint),var(--rose));
+    background-size:200%; animation:shimmer 3s linear infinite;
+  }
+  @keyframes shimmer { to { background-position:200% 0; } }
+  .cat-tab {
+    flex:0 0 auto; background:none; border:none; color:var(--muted);
+    font-family:'M PLUS Rounded 1c',sans-serif; font-size:0.78rem; font-weight:700;
+    padding:12px 20px; cursor:pointer; letter-spacing:0.04em;
+    transition:color 0.2s,background 0.2s; border-right:1px solid var(--blush);
+    position:relative; white-space:nowrap;
+  }
+  .cat-tab:last-child { border-right:none; }
+  .cat-tab::after {
+    content:''; position:absolute; bottom:0; left:50%; right:50%; height:3px;
+    background:var(--berry); border-radius:3px 3px 0 0; transition:left 0.2s,right 0.2s;
+  }
+  .cat-tab.active { color:var(--berry); }
+  .cat-tab.active::after { left:12%; right:12%; }
+  .cat-tab:hover:not(.active) { color:var(--deep-rose); background:#fff5f8; }
+
+  /* PANELS */
+  .cat-panel { display:none; padding:24px 24px 32px; }
+  .cat-panel.active { display:block; animation:fadeUp 0.2s ease; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+
+  /* CONTROLS */
+  .controls { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; align-items:center; }
+  .search-wrap { flex:1; min-width:160px; position:relative; }
+  .search-wrap::before {
+    content:'✦'; position:absolute; left:11px; top:50%; transform:translateY(-50%);
+    color:var(--rose); font-size:0.68rem; pointer-events:none;
+  }
+  .search-input {
+    width:100%; background:var(--cream); border:2px solid var(--rose);
+    border-radius:12px; padding:8px 12px 8px 28px;
+    font-family:'M PLUS Rounded 1c',sans-serif; font-size:0.8rem;
+    color:var(--dark); outline:none; transition:border-color 0.18s,var(--transition);
+  }
+  .search-input:focus { border-color:var(--berry); }
+  .search-input::placeholder { color:var(--muted); }
+  .tag-filter {
+    background:var(--cream); border:2px solid var(--blush); border-radius:10px;
+    padding:7px 12px; font-size:0.72rem; font-weight:700; color:var(--muted);
+    cursor:pointer; white-space:nowrap;
+    font-family:'M PLUS Rounded 1c',sans-serif; transition:all 0.18s;
+    box-shadow:0 2px 0 var(--rose);
+  }
+  .tag-filter.active { background:var(--berry); color:#fff; border-color:var(--berry); box-shadow:0 2px 0 #a0466a; }
+  .tag-filter:hover:not(.active) { background:var(--blush); color:var(--berry); }
+
+  /* SECTION DIVIDERS */
+  .section-divider {
+    grid-column:1/-1; display:flex; align-items:center; gap:10px;
+    padding:8px 0 4px; color:var(--berry);
+    font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+  }
+  .section-divider::before,.section-divider::after {
+    content:''; flex:1; height:2px;
+    background:linear-gradient(90deg,transparent,var(--rose),transparent);
+  }
+
+  /* CARD GRID */
+  .card-grid {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(172px,1fr)); gap:14px;
+  }
+
+  /* ITEM CARD */
+  .item-card {
+    background:var(--cream); border:2px solid var(--rose); border-radius:16px;
+    overflow:hidden; box-shadow:0 4px 0 var(--deep-rose);
+    transition:transform 0.18s,box-shadow 0.18s,var(--transition);
+    display:flex; flex-direction:column;
+  }
+  .item-card:hover { transform:translateY(-4px); box-shadow:0 8px 0 var(--deep-rose); }
+  .item-card.hidden { display:none; }
+
+  .item-img-wrap {
+    aspect-ratio:1/1; overflow:hidden;
+    background:linear-gradient(135deg,var(--blush),var(--lavender));
+    display:flex; align-items:center; justify-content:center;
+  }
+  .item-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.3s; }
+  .item-card:hover .item-img-wrap img { transform:scale(1.05); }
+  .img-loading { display:flex; flex-direction:column; align-items:center; gap:6px; color:var(--muted); font-size:0.7rem; }
+  .img-spinner {
+    width:20px; height:20px; border:2px solid var(--blush);
+    border-top-color:var(--berry); border-radius:50%; animation:spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  .item-info { padding:10px 12px 12px; flex:1; display:flex; flex-direction:column; gap:5px; }
+  .item-name { font-family:'Nunito',sans-serif; font-size:0.85rem; font-weight:900; color:var(--dark); line-height:1.2; }
+  .item-notes { font-size:0.72rem; color:var(--muted); line-height:1.5; }
+  .shares-with { font-size:0.72rem; color:var(--berry); font-weight:700; }
+  .item-tags { display:flex; flex-wrap:wrap; gap:3px; margin-top:2px; }
+  .item-tag {
+    border-radius:7px; padding:2px 7px; font-size:0.65rem; font-weight:700;
+    border:1.5px solid; white-space:nowrap;
+  }
+  .tag-mamefriend { background:#ffeef6; color:var(--berry); border-color:var(--rose); }
+  .tag-chibi      { background:#ffeef6; color:var(--berry); border-color:var(--rose); }
+  .tag-feminine   { background:var(--lavender); color:#6045a0; border-color:var(--periwinkle); }
+  .tag-masculine  { background:#e8f4ff; color:#3060a0; border-color:#b0ccf0; }
+  .tag-makeup     { background:#fff0f8; color:#a03080; border-color:#f0b0d8; }
+  .tag-eyes       { background:#f0f0ff; color:#4040a0; border-color:#c0c0f0; }
+  .tag-recolor    { background:var(--soft-mint); color:#2a6050; border-color:var(--mint); }
+  .tag-default    { background:var(--cream); color:var(--muted); border-color:var(--blush); }
+
+  .booth-btn {
+    display:flex; align-items:center; justify-content:center; gap:5px;
+    margin-top:8px; background:var(--berry); color:#fff; border:none;
+    border-radius:9px; padding:7px; font-size:0.72rem; font-weight:700;
+    font-family:'M PLUS Rounded 1c',sans-serif; text-decoration:none;
+    box-shadow:0 3px 0 #a0466a; transition:all 0.15s;
+  }
+  .booth-btn:hover { background:var(--deep-rose); transform:translateY(-1px); box-shadow:0 5px 0 #a0466a; }
+
+  /* EMPTY */
+  .empty-state {
+    grid-column:1/-1; text-align:center; padding:48px 20px;
+    color:var(--muted); font-size:0.85rem;
+  }
+  .empty-state span { font-size:2rem; display:block; margin-bottom:10px; }
+
+  /* DARK MODE OVERRIDES */
+  body.dark .item-card { background:var(--cream); border-color:var(--rose); }
+
+  /* DARK TOGGLE */
+  .dark-toggle {
+    position:fixed; bottom:20px; right:20px; z-index:100;
+    background:var(--berry); border:none; border-radius:50%;
+    width:44px; height:44px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem;
+    box-shadow:0 4px 0 #a0466a,0 4px 16px rgba(0,0,0,0.2);
+    transition:transform 0.18s,box-shadow 0.18s,background 0.3s;
+  }
+  .dark-toggle:hover { transform:translateY(-2px) scale(1.08); }
+  body.dark .dark-toggle { background:#4a2840; box-shadow:0 4px 0 #2a1428,0 4px 16px rgba(0,0,0,0.5); }
+
+  @media (max-width:500px) {
+    .card-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+    .cat-panel { padding:16px 12px 24px; }
+    .header { padding:12px 16px; }
+    .header h1 { font-size:1.05rem; }
+  }
+</style>
+</head>
+<body>
+
+<button class="dark-toggle" id="dark-toggle" onclick="toggleDark()" title="toggle dark mode">🌙</button>
+
+<div class="bg-deco">
+  <span class="star" style="top:5%;left:4%;animation-delay:0s">✦</span>
+  <span class="star" style="top:15%;left:92%;animation-delay:1s">✿</span>
+  <span class="star" style="top:40%;left:2%;animation-delay:2s">♡</span>
+  <span class="star" style="top:70%;left:95%;animation-delay:0.5s">✦</span>
+  <span class="star" style="top:85%;left:8%;animation-delay:1.5s">✿</span>
+</div>
+
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>✦ mitty's asset list ♡</h1>
+      <p>for friends only — please don't share this link!</p>
+    </div>
+    <div class="header-right">
+      <span class="count-badge" id="count-badge">loading...</span>
+      <a href="index.html" class="back-btn">← back to site</a>
+    </div>
+  </div>
+
+  <div class="body-card">
+    <div class="cat-tabs">
+      <button class="cat-tab active" onclick="switchCat('avatars', this)">✦ avatars</button>
+      <button class="cat-tab"        onclick="switchCat('clothes', this)">✦ clothes</button>
+      <button class="cat-tab"        onclick="switchCat('hair',    this)">✦ hair</button>
+      <button class="cat-tab"        onclick="switchCat('addons',  this)">✦ addons</button>
+      <button class="cat-tab"        onclick="switchCat('textures',this)">✦ textures</button>
+      <button class="cat-tab"        onclick="switchCat('misc',    this)">✦ misc</button>
+    </div>
+
+    <!-- AVATARS -->
+    <div id="cat-avatars" class="cat-panel active">
+      <div class="controls">
+        <div class="search-wrap">
+          <input class="search-input" type="text" placeholder="search avatars..." oninput="filterPanel('avatars')">
+        </div>
+        <button class="tag-filter active" data-filter="all"        onclick="setTagFilter('avatars','all',this)">all</button>
+        <button class="tag-filter"        data-filter="mamefriend"  onclick="setTagFilter('avatars','mamefriend',this)">mamefriend</button>
+        <button class="tag-filter"        data-filter="chibi"       onclick="setTagFilter('avatars','chibi',this)">chibi</button>
+        <button class="tag-filter"        data-filter="feminine"    onclick="setTagFilter('avatars','feminine',this)">feminine</button>
+        <button class="tag-filter"        data-filter="masculine"   onclick="setTagFilter('avatars','masculine',this)">masculine</button>
+      </div>
+      <div class="card-grid" id="grid-avatars"></div>
+    </div>
+
+    <!-- CLOTHES -->
+    <div id="cat-clothes" class="cat-panel">
+      <div class="controls">
+        <div class="search-wrap">
+          <input class="search-input" type="text" placeholder="search clothes..." oninput="filterPanel('clothes')">
+        </div>
+        <div id="clothes-filters" style="display:contents"></div>
+      </div>
+      <div class="card-grid" id="grid-clothes"></div>
+    </div>
+
+    <!-- HAIR -->
+    <div id="cat-hair" class="cat-panel">
+      <div class="controls">
+        <div class="search-wrap">
+          <input class="search-input" type="text" placeholder="search hair..." oninput="filterPanel('hair')">
+        </div>
+      </div>
+      <div class="card-grid" id="grid-hair"></div>
+    </div>
+
+    <!-- ADDONS -->
+    <div id="cat-addons" class="cat-panel">
+      <div class="controls">
+        <div class="search-wrap">
+          <input class="search-input" type="text" placeholder="search addons..." oninput="filterPanel('addons')">
+        </div>
+        <div id="addons-filters" style="display:contents"></div>
+      </div>
+      <div class="card-grid" id="grid-addons"></div>
+    </div>
+
+    <!-- TEXTURES -->
+    <div id="cat-textures" class="cat-panel">
+      <div class="controls">
+        <div class="search-wrap">
+          <input class="search-input" type="text" placeholder="search textures..." oninput="filterPanel('textures')">
+        </div>
+        <button class="tag-filter active" data-filter="all"     onclick="setTagFilter('textures','all',this)">all</button>
+        <button class="tag-filter"        data-filter="makeup"  onclick="setTagFilter('textures','makeup',this)">makeup</button>
+        <button class="tag-filter"        data-filter="eyes"    onclick="setTagFilter('textures','eyes',this)">eyes</button>
+        <button class="tag-filter"        data-filter="recolor" onclick="setTagFilter('textures','recolor',this)">recolor</button>
+      </div>
+      <div class="card-grid" id="grid-textures"></div>
+    </div>
+
+    <!-- MISC -->
+    <div id="cat-misc" class="cat-panel">
+      <div class="controls">
+        <div class="search-wrap">
+          <input class="search-input" type="text" placeholder="search misc..." oninput="filterPanel('misc')">
+        </div>
+      </div>
+      <div class="card-grid" id="grid-misc"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── Dark mode ─────────────────────────────────────────────────────
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark');
+  localStorage.setItem('mitty-dark', isDark ? '1' : '0');
+  document.getElementById('dark-toggle').textContent = isDark ? '☀️' : '🌙';
+}
+(function(){
+  const saved = localStorage.getItem('mitty-dark');
+  if (saved === '1') {
+    document.body.classList.add('dark');
+    document.addEventListener('DOMContentLoaded', () => {
+      const b = document.getElementById('dark-toggle');
+      if (b) b.textContent = '☀️';
+    });
+  }
+})();
+
+// ── State ─────────────────────────────────────────────────────────
+const tagFilters = { avatars:'all', clothes:'all', hair:'all', addons:'all', textures:'all', misc:'all' };
+const thumbCache = {};
+
+// ── Tab switching ─────────────────────────────────────────────────
+function switchCat(cat, btn) {
+  document.querySelectorAll('.cat-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('cat-' + cat).classList.add('active');
+  btn.classList.add('active');
+  updateBadge();
+}
+
+// ── Tag colour helper ─────────────────────────────────────────────
+const TAG_CLASSES = {
+  mamefriend:'tag-mamefriend', chibi:'tag-chibi', feminine:'tag-feminine',
+  masculine:'tag-masculine', makeup:'tag-makeup', eyes:'tag-eyes', recolor:'tag-recolor'
+};
+function tagCls(t) { return TAG_CLASSES[t.toLowerCase()] || 'tag-default'; }
+
+// ── Booth thumbnail fetching ──────────────────────────────────────
+async function fetchBoothThumb(boothId, wrap) {
+  if (!boothId) { showPlaceholder(wrap); return; }
+  if (thumbCache[boothId] === 'error') { showPlaceholder(wrap); return; }
+  if (thumbCache[boothId]) { setImg(wrap, thumbCache[boothId]); return; }
+
+  try {
+    const url   = `https://booth.pm/en/items/${boothId}`;
+    const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+    const res   = await fetch(proxy);
+    const data  = await res.json();
+    const match = data.contents.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/);
+    if (match && match[1]) {
+      thumbCache[boothId] = match[1];
+      setImg(wrap, match[1]);
+    } else {
+      thumbCache[boothId] = 'error';
+      showPlaceholder(wrap);
+    }
+  } catch {
+    thumbCache[boothId] = 'error';
+    showPlaceholder(wrap);
+  }
+}
+
+function setImg(wrap, src) {
+  const img = document.createElement('img');
+  img.loading = 'lazy';
+  img.onerror = () => showPlaceholder(wrap);
+  img.onload  = () => { wrap.innerHTML = ''; wrap.appendChild(img); };
+  img.src = src;
+}
+function showPlaceholder(wrap) {
+  wrap.innerHTML = `<div class="img-loading"><span style="font-size:1.6rem">✿</span></div>`;
+}
+
+// ── Intersection observer for lazy thumbnail loading ──────────────
+function observeCards(gridId) {
+  const grid = document.getElementById(gridId);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+      const wrap = card.querySelector('.item-img-wrap');
+      if (wrap && !wrap.dataset.loaded) {
+        wrap.dataset.loaded = '1';
+        fetchBoothThumb(card.dataset.booth, wrap);
+      }
+      observer.unobserve(card);
+    });
+  }, { rootMargin:'120px' });
+  grid.querySelectorAll('.item-card').forEach(c => observer.observe(c));
+}
+
+// ── Build a card HTML string ──────────────────────────────────────
+function buildCard(item, extra) {
+  const tags     = (item.tags||[]).map(t => `<span class="item-tag ${tagCls(t)}">${t}</span>`).join('');
+  const boothUrl = item.booth_id ? `https://booth.pm/en/items/${item.booth_id}` : (item.booth_url||'');
+  const boothBtn = boothUrl ? `<a class="booth-btn" href="${boothUrl}" target="_blank" rel="noopener">✦ view on booth</a>` : '';
+  return `
+    <div class="item-card"
+         data-name="${esc((item.name||'').toLowerCase())}"
+         data-tags="${esc((item.tags||[]).join(',').toLowerCase())}"
+         data-booth="${esc(item.booth_id||'')}">
+      <div class="item-img-wrap"><div class="img-loading"><div class="img-spinner"></div></div></div>
+      <div class="item-info">
+        <div class="item-name">${esc(item.name||'')}</div>
+        ${extra||''}
+        ${item.notes ? `<div class="item-notes">${esc(item.notes)}</div>` : ''}
+        ${tags ? `<div class="item-tags">${tags}</div>` : ''}
+        ${boothBtn}
+      </div>
+    </div>`;
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Render avatars with sections ──────────────────────────────────
+const AVATAR_SECTIONS = [
+  { key:'mamefriend', label:'✿ mamefriends' },
+  { key:'chibi',      label:'✿ chibi' },
+  { key:'feminine',   label:'✿ feminine' },
+  { key:'masculine',  label:'✿ masculine' },
+  { key:'other',      label:'✿ other' },
+];
+
+function renderAvatars(items) {
+  const grid = document.getElementById('grid-avatars');
+  if (!items?.length) { grid.innerHTML = emptyHtml(); return; }
+
+  // Bucket avatars into sections
+  const buckets = { mamefriend:[], chibi:[], feminine:[], masculine:[], other:[] };
+  items.forEach(item => {
+    const t = (item.tags||[]).map(s => s.toLowerCase());
+    if      (t.includes('mamefriend')) buckets.mamefriend.push(item);
+    else if (t.includes('chibi'))      buckets.chibi.push(item);
+    else if (t.includes('feminine'))   buckets.feminine.push(item);
+    else if (t.includes('masculine'))  buckets.masculine.push(item);
+    else                               buckets.other.push(item);
+  });
+
+  let html = '';
+  AVATAR_SECTIONS.forEach(({ key, label }) => {
+    if (!buckets[key].length) return;
+    html += `<div class="section-divider" data-section="${key}">${label}</div>`;
+    buckets[key].forEach(item => {
+      const shares = item.shares_body_with?.length
+        ? `<div class="shares-with">🔗 shares body with: ${item.shares_body_with.map(esc).join(', ')}</div>` : '';
+      html += buildCard(item, shares).replace('class="item-card"', `class="item-card" data-section="${key}"`);
+    });
+  });
+
+  grid.innerHTML = html;
+  observeCards('grid-avatars');
+}
+
+// ── Render a plain grid ───────────────────────────────────────────
+function renderGrid(gridId, items, extraFn) {
+  const grid = document.getElementById(gridId);
+  if (!items?.length) { grid.innerHTML = emptyHtml(); return; }
+  grid.innerHTML = items.map(item => buildCard(item, extraFn ? extraFn(item) : '')).join('');
+  observeCards(gridId);
+}
+
+function emptyHtml() {
+  return `<div class="empty-state"><span>✿</span>nothing here yet ♡</div>`;
+}
+
+// ── Dynamic tag filters (clothes + addons) ────────────────────────
+function buildDynamicFilters(panelId, containerId, items) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  const allTags = [...new Set(items.flatMap(i => (i.tags||[])))].sort();
+  container.innerHTML = [
+    `<button class="tag-filter active" data-filter="all" onclick="setTagFilter('${panelId}','all',this)">all</button>`,
+    ...allTags.map(t =>
+      `<button class="tag-filter" data-filter="${t.toLowerCase()}" onclick="setTagFilter('${panelId}','${t.toLowerCase()}',this)">${esc(t)}</button>`)
+  ].join('');
+}
+
+// ── Filtering ─────────────────────────────────────────────────────
+function filterPanel(panelId) {
+  const panel  = document.getElementById('cat-' + panelId);
+  const query  = (panel.querySelector('.search-input')?.value||'').toLowerCase().trim();
+  const filter = tagFilters[panelId]||'all';
+
+  panel.querySelectorAll('.item-card').forEach(card => {
+    const nameOk = card.dataset.name.includes(query);
+    const tagOk  = filter === 'all'
+      || card.dataset.tags.includes(filter)
+      || card.dataset.section === filter;
+    card.classList.toggle('hidden', !(nameOk && tagOk));
+  });
+
+  // Show/hide section dividers based on visible cards
+  panel.querySelectorAll('.section-divider').forEach(div => {
+    const sec = div.dataset.section;
+    const hasVisible = [...panel.querySelectorAll(`.item-card[data-section="${sec}"]`)]
+      .some(c => !c.classList.contains('hidden'));
+    div.style.display = hasVisible ? '' : 'none';
+  });
+
+  updateBadge();
+}
+
+function setTagFilter(panelId, filter, btn) {
+  tagFilters[panelId] = filter;
+  document.getElementById('cat-' + panelId)
+    .querySelectorAll('.tag-filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterPanel(panelId);
+}
+
+function updateBadge() {
+  const panel = document.querySelector('.cat-panel.active');
+  if (!panel) return;
+  const total   = panel.querySelectorAll('.item-card').length;
+  const visible = panel.querySelectorAll('.item-card:not(.hidden)').length;
+  document.getElementById('count-badge').textContent =
+    visible === total ? `${total} items` : `${visible} / ${total}`;
+}
+
+// ── Load ──────────────────────────────────────────────────────────
+fetch('avatars.json')
+  .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+  .then(data => {
+    renderAvatars(data.avatars || []);
+    renderGrid('grid-clothes',  data.clothes  || []);
+    renderGrid('grid-hair',     data.hair     || []);
+    renderGrid('grid-addons',   data.addons   || []);
+    renderGrid('grid-textures', data.textures || []);
+    renderGrid('grid-misc',     data.misc     || []);
+    buildDynamicFilters('clothes', 'clothes-filters', data.clothes || []);
+    buildDynamicFilters('addons',  'addons-filters',  data.addons  || []);
+    updateBadge();
+  })
+  .catch(() => {
+    ['avatars','clothes','hair','addons','textures','misc'].forEach(c => {
+      document.getElementById('grid-' + c).innerHTML = `
+        <div class="empty-state"><span>✿</span>
+          create an <strong>avatars.json</strong> to get started ♡
+        </div>`;
+    });
+    document.getElementById('count-badge').textContent = '0 items';
+  });
+</script>
+</body>
+</html>
