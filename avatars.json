@@ -406,6 +406,38 @@
       "tags": [
         "PlusHead"
       ]
+    },
+    {
+      "name": "Rusk",
+      "booth_id": "2559783",
+      "image": "https://booth.pximg.net/61a3b2d7-b4b1-4f97-9e48-ffe959b26ae9/i/2559783/94e7e34d-c8fa-41e1-b2ea-433f7ebb8b7c_base_resized.jpg",
+      "tags": [
+        "Komado"
+      ]
+    },
+    {
+      "name": "Karin",
+      "booth_id": "3470989",
+      "image": "https://booth.pximg.net/61a3b2d7-b4b1-4f97-9e48-ffe959b26ae9/i/3470989/a70bc916-21f3-4b06-ae3a-eb302058a0b5_base_resized.jpg",
+      "tags": [
+        "Komado"
+      ]
+    },
+    {
+      "name": "Mint",
+      "booth_id": "2258111",
+      "image": "https://booth.pximg.net/61a3b2d7-b4b1-4f97-9e48-ffe959b26ae9/i/2258111/855f59ec-25c5-4a3b-bdc4-d6de695e31be_base_resized.jpg",
+      "tags": [
+        "Komado"
+      ]
+    },
+    {
+      "name": "Milk",
+      "booth_id": "2953391",
+      "image": "https://booth.pximg.net/61a3b2d7-b4b1-4f97-9e48-ffe959b26ae9/i/2953391/d16328b7-6585-42e3-af84-83bde2f7c2f7_base_resized.jpg",
+      "tags": [
+        "Komado"
+      ]
     }
   ],
   "clothes": [
@@ -13180,7 +13212,7 @@
       ]
     },
     {
-      "name": "MameKarin",
+      "name": "Kipfel-ify",
       "booth_id": "6382006",
       "image": "https://booth.pximg.net/2bbfdc65-2d77-4117-837a-0db2a4d73973/i/6382006/ce6f0f33-59ae-4308-a787-c1624736dc85_base_resized.jpg",
       "tags": [
@@ -13191,7 +13223,10 @@
         "Mafuyu",
         "Rurune",
         "Rusk",
-        "Velle"
+        "Velle",
+        "Yugi",
+        "Miyo",
+        "Mao"
       ]
     },
     {
