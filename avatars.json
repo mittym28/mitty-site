@@ -3,82 +3,130 @@
     {
       "name": "Clonka",
       "booth_id": "4256853",
-      "image": "https://booth.pximg.net/360bd522-9817-40ab-9881-391d1894f8d5/i/4256853/b2124459-5563-4b70-b6cf-04dd519d99af_base_resized.jpg"
+      "image": "https://booth.pximg.net/360bd522-9817-40ab-9881-391d1894f8d5/i/4256853/b2124459-5563-4b70-b6cf-04dd519d99af_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Mamehinata",
       "booth_id": "4340548",
-      "image": "https://booth.pximg.net/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/4340548/cb43c1f7-bbdf-4115-942a-491c32b1de24_base_resized.jpg"
+      "image": "https://booth.pximg.net/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/4340548/cb43c1f7-bbdf-4115-942a-491c32b1de24_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Uzuruha",
       "booth_id": "5673586",
-      "image": "https://booth.pximg.net/1a3d7c54-a290-40a4-b267-0f2e041fef9a/i/5673586/c5c3dddb-d322-4526-be13-9474b6154511_base_resized.jpg"
+      "image": "https://booth.pximg.net/1a3d7c54-a290-40a4-b267-0f2e041fef9a/i/5673586/c5c3dddb-d322-4526-be13-9474b6154511_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Ortwa",
       "booth_id": "5702588",
-      "image": "https://booth.pximg.net/360bd522-9817-40ab-9881-391d1894f8d5/i/5702588/c7fa5b1c-997d-4b11-8171-4f991579f599_base_resized.jpg"
+      "image": "https://booth.pximg.net/360bd522-9817-40ab-9881-391d1894f8d5/i/5702588/c7fa5b1c-997d-4b11-8171-4f991579f599_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Mitsumame",
       "booth_id": "5748454",
-      "image": "https://booth.pximg.net/21238dba-ad27-41eb-b3d1-0f52d9f8ffc3/i/5748454/719a87e2-2642-4518-aec0-d09120d49957_base_resized.jpg"
+      "image": "https://booth.pximg.net/21238dba-ad27-41eb-b3d1-0f52d9f8ffc3/i/5748454/719a87e2-2642-4518-aec0-d09120d49957_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Kipfel",
       "booth_id": "5813187",
-      "image": "https://booth.pximg.net/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/5813187/9163df6c-cc4e-4a07-ace2-d22e3be58be8_base_resized.jpg"
+      "image": "https://booth.pximg.net/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/5813187/9163df6c-cc4e-4a07-ace2-d22e3be58be8_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Ulthara",
       "booth_id": "5955835",
-      "image": "https://booth.pximg.net/c2a2433c-9c80-418b-a274-9fa5d7f040a8/i/5955835/32fddac4-4467-46af-82b0-5f6cf4f1e648_base_resized.jpg"
+      "image": "https://booth.pximg.net/c2a2433c-9c80-418b-a274-9fa5d7f040a8/i/5955835/32fddac4-4467-46af-82b0-5f6cf4f1e648_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Isanai Nuku",
       "booth_id": "6044846",
-      "image": "https://booth.pximg.net/c5847de5-5a78-43ab-b71b-3238a0799830/i/6044846/b2f96dc0-519d-4b54-9932-cefcbf1cfc8d_base_resized.jpg"
+      "image": "https://booth.pximg.net/c5847de5-5a78-43ab-b71b-3238a0799830/i/6044846/b2f96dc0-519d-4b54-9932-cefcbf1cfc8d_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Yilnel",
       "booth_id": "6289095",
-      "image": "https://booth.pximg.net/849eb5f8-33ff-4e28-9367-3cf9314e2366/i/6289095/98c420ca-db44-47ba-bbc5-4ca132640c53_base_resized.jpg"
+      "image": "https://booth.pximg.net/849eb5f8-33ff-4e28-9367-3cf9314e2366/i/6289095/98c420ca-db44-47ba-bbc5-4ca132640c53_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "NoraFirika",
       "booth_id": "6358495",
-      "image": "https://booth.pximg.net/2d436811-2a83-4a78-b85e-7f91f2b64288/i/6358495/78ab6307-9e4f-407c-85a5-223369155381_base_resized.jpg"
+      "image": "https://booth.pximg.net/2d436811-2a83-4a78-b85e-7f91f2b64288/i/6358495/78ab6307-9e4f-407c-85a5-223369155381_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "IO Dragonewt",
       "booth_id": "6641745",
-      "image": "https://booth.pximg.net/c2a2433c-9c80-418b-a274-9fa5d7f040a8/i/6641745/3126bf73-8bc3-49d3-9c58-f3d1e08eba70_base_resized.jpg"
+      "image": "https://booth.pximg.net/c2a2433c-9c80-418b-a274-9fa5d7f040a8/i/6641745/3126bf73-8bc3-49d3-9c58-f3d1e08eba70_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "LilLeo",
       "booth_id": "7374627",
-      "image": "https://booth.pximg.net/87318daa-7f36-492f-839d-6a92c512e147/i/7374627/93701395-05af-479e-98e3-54bf9b9a62d1_base_resized.jpg"
+      "image": "https://booth.pximg.net/87318daa-7f36-492f-839d-6a92c512e147/i/7374627/93701395-05af-479e-98e3-54bf9b9a62d1_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Ricorine",
       "booth_id": "7525578",
-      "image": "https://booth.pximg.net/395be418-27fb-4339-a2d7-3309b5b175c0/i/7525578/fbbefb81-f174-4f76-ac20-3f9a9c9faa0a_base_resized.jpg"
+      "image": "https://booth.pximg.net/395be418-27fb-4339-a2d7-3309b5b175c0/i/7525578/fbbefb81-f174-4f76-ac20-3f9a9c9faa0a_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Siska",
       "booth_id": "7543853",
-      "image": "https://booth.pximg.net/4720f57f-29f2-4c9f-af38-5b7b81653a21/i/7543853/314ac31d-8580-4770-b58a-04dd66f12617_base_resized.jpg"
+      "image": "https://booth.pximg.net/4720f57f-29f2-4c9f-af38-5b7b81653a21/i/7543853/314ac31d-8580-4770-b58a-04dd66f12617_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "NoraMiaree",
       "booth_id": "7657739",
-      "image": "https://booth.pximg.net/2d436811-2a83-4a78-b85e-7f91f2b64288/i/7657739/f8735563-f6b0-4619-af59-a9dbddc749d9_base_resized.jpg"
+      "image": "https://booth.pximg.net/2d436811-2a83-4a78-b85e-7f91f2b64288/i/7657739/f8735563-f6b0-4619-af59-a9dbddc749d9_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "EPBOPO",
       "booth_id": "7872581",
-      "image": "https://booth.pximg.net/1a3d7c54-a290-40a4-b267-0f2e041fef9a/i/7872581/c64e1410-30b1-4f95-90f8-4af8fca67a9c_base_resized.jpg"
+      "image": "https://booth.pximg.net/1a3d7c54-a290-40a4-b267-0f2e041fef9a/i/7872581/c64e1410-30b1-4f95-90f8-4af8fca67a9c_base_resized.jpg",
+      "tags": [
+        "MameFriends"
+      ]
     },
     {
       "name": "Maya",
@@ -384,7 +432,7 @@
       "booth_id": "2926106",
       "image": "https://booth.pximg.net/c/620x620/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/2926106/65c3f55a-f0ee-406e-a26a-232ae1940f62_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -488,7 +536,7 @@
       "booth_id": "3480551",
       "image": "https://booth.pximg.net/c/620x620/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/3480551/9357bb59-f099-4fb0-8eaa-872b8d44a278_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -707,7 +755,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Moe",
         "Plum",
         "Selestia",
@@ -863,7 +911,7 @@
       "booth_id": "4313776",
       "image": "https://booth.pximg.net/c/620x620/d69c8c47-a651-4313-9684-add416318c90/i/4313776/a0eb94e5-97ec-4541-8a70-fc0145098fef_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -918,7 +966,7 @@
       "booth_id": "4369421",
       "image": "https://booth.pximg.net/c/620x620/ba283d50-3baa-47cc-a1cc-fe7a49c1dfcf/i/4369421/b602e8f5-d5b0-4bc5-afbb-56d5b622e0c8_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -926,7 +974,7 @@
       "booth_id": "4382131",
       "image": "https://booth.pximg.net/c/620x620/1a3d7c54-a290-40a4-b267-0f2e041fef9a/i/4382131/b55ae06c-f504-46cd-ad6a-a20e105a507a_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -960,7 +1008,7 @@
       "booth_id": "4410230",
       "image": "https://booth.pximg.net/c/620x620/27c22487-d64e-42f9-baeb-0e0d5dfc0cf1/i/4410230/0cb7ae36-3b78-4742-868b-32f95125fb93_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -977,7 +1025,7 @@
       "booth_id": "4412152",
       "image": "https://booth.pximg.net/c/620x620/d12b2094-f23f-4e9c-a1ca-06611e10cd16/i/4412152/7ff10097-bc21-49a4-9ef9-e9416de5bfc6_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -985,7 +1033,7 @@
       "booth_id": "4413870",
       "image": "https://booth.pximg.net/c/620x620/bdb7decf-1ad7-40e3-b095-e8c6cea6fc0d/i/4413870/619a3a51-f41e-4e0f-bc86-87e2f04509d1_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -993,7 +1041,7 @@
       "booth_id": "4416309",
       "image": "https://booth.pximg.net/c/620x620/3f4979ee-4c70-446d-b602-b10503b20cdd/i/4416309/68521357-b5c1-43c8-845e-a73cedda5bbb_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1009,7 +1057,7 @@
       "booth_id": "4418531",
       "image": "https://booth.pximg.net/c/620x620/f67a84c9-acc7-4d7b-bdc9-5c942bd5ced3/i/4418531/8c68bd47-0b53-45dd-bd61-1449007be0a7_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1017,7 +1065,7 @@
       "booth_id": "4419165",
       "image": "https://booth.pximg.net/c/620x620/ed7b428d-749b-4569-a20b-8d7777470322/i/4419165/536ec945-4185-4fb1-81cb-a9a62e1c5e20_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1025,7 +1073,7 @@
       "booth_id": "4419241",
       "image": "https://booth.pximg.net/c/620x620/3fa269c8-0199-4c8f-99b0-6879e0f2df8b/i/4419241/cde0e20e-4008-48d9-bc8f-642622848eac_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1033,7 +1081,7 @@
       "booth_id": "4419406",
       "image": "https://booth.pximg.net/c/620x620/4f37665c-1c6d-4e38-88af-8e1a757b6396/i/4419406/11773e4f-6f1f-4f8f-9c2c-52c7505227a0_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1041,7 +1089,7 @@
       "booth_id": "4420741",
       "image": "https://booth.pximg.net/c/620x620/53736367-44ab-4339-b951-90f318f8c00d/i/4420741/21063798-d7ec-4b89-83f7-e807920bc0a1_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1049,7 +1097,7 @@
       "booth_id": "4422144",
       "image": "https://booth.pximg.net/c/620x620/765ef6dd-cbb7-4e23-ad40-51e83c1a9963/i/4422144/f73ec72c-448f-4dd6-8221-32aafac53c87_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1057,7 +1105,7 @@
       "booth_id": "4422670",
       "image": "https://booth.pximg.net/c/620x620/dc0b6b8e-04c3-4283-9d2a-176f69bb3adc/i/4422670/21947e1a-9fdc-4647-8be3-b166085749a0_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1065,7 +1113,7 @@
       "booth_id": "4424528",
       "image": "https://booth.pximg.net/c/620x620/0b553cf3-9222-4abe-bc27-60aa8907d63d/i/4424528/44748f7f-6898-4836-9889-4557cb7441f0_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1073,7 +1121,7 @@
       "booth_id": "4426673",
       "image": "https://booth.pximg.net/c/620x620/dd7fbe71-3838-4d9a-9335-ca27dce92aa2/i/4426673/a11089ea-eca8-4bc1-a5f0-0b0666b926bd_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1081,7 +1129,7 @@
       "booth_id": "4428633",
       "image": "https://www.dropbox.com/scl/fi/3eptjjcnm48rgqcih0qbn/4428633.jpg?rlkey=99by4pi1nbgn1smackvvysmax&dl=1",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1101,7 +1149,7 @@
       "booth_id": "4434344",
       "image": "https://booth.pximg.net/c/620x620/0f7bacaa-5634-4ee2-a91e-665dfa7487bc/i/4434344/0a77c60c-4df9-4ed6-ad07-bcaa9c53ca1a_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1109,7 +1157,7 @@
       "booth_id": "4434500",
       "image": "https://booth.pximg.net/c/620x620/27c22487-d64e-42f9-baeb-0e0d5dfc0cf1/i/4434500/3384e1ba-483e-4d1f-9fe3-04e3d616742d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1117,7 +1165,7 @@
       "booth_id": "4440269",
       "image": "https://booth.pximg.net/c/620x620/3f709dc5-9760-40ac-be9f-324b72f51b12/i/4440269/2ffe21a2-9460-4e57-aed1-1b642b3c8613_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1134,7 +1182,7 @@
       "booth_id": "4442294",
       "image": "https://booth.pximg.net/c/620x620/1182cc1b-cd56-41fc-a765-d4f673fb1ceb/i/4442294/d9709b26-f13d-4eb0-8155-2449396de8c1_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1142,7 +1190,7 @@
       "booth_id": "4442867",
       "image": "https://booth.pximg.net/c/620x620/41f68c73-ca6d-4e82-848d-f6b282be0904/i/4442867/7e1723e5-68b5-4a10-bf0c-0aeec52e58e2_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1159,7 +1207,7 @@
       "booth_id": "4445864",
       "image": "https://booth.pximg.net/c/620x620/d7d10ad6-f53c-4b57-b580-22f4a37fdb63/i/4445864/cc702cbe-10fb-4a78-b141-51261a32ec23_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1167,7 +1215,7 @@
       "booth_id": "4450529",
       "image": "https://booth.pximg.net/c/620x620/1a3d7c54-a290-40a4-b267-0f2e041fef9a/i/4450529/7eae50f6-1056-4fa3-b7e8-d69c747d5444_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1175,7 +1223,7 @@
       "booth_id": "4452915",
       "image": "https://booth.pximg.net/c/620x620/d12dc72a-7626-4062-982e-bde591398b2f/i/4452915/0e63707e-1440-40c2-afdf-b92fe0a78b94_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1183,7 +1231,7 @@
       "booth_id": "4453151",
       "image": "https://booth.pximg.net/c/620x620/3f709dc5-9760-40ac-be9f-324b72f51b12/i/4453151/58b7591d-aa81-4008-b060-8842339af397_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1200,7 +1248,7 @@
       "booth_id": "4460060",
       "image": "https://booth.pximg.net/c/620x620/2aca5456-6275-4dcf-a137-686ab65a2452/i/4460060/dcd8593f-fdfa-45d2-9a12-b62749e4ed07_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1208,7 +1256,7 @@
       "booth_id": "4461673",
       "image": "https://booth.pximg.net/c/620x620/5b5a580a-f953-4121-8b22-00fa382fb3ba/i/4461673/fb949643-329f-4b87-9ec9-dd5a2072d088_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1216,7 +1264,7 @@
       "booth_id": "4468338",
       "image": "https://booth.pximg.net/c/620x620/27c22487-d64e-42f9-baeb-0e0d5dfc0cf1/i/4468338/e2d91809-fac7-425d-94d6-f92dc5383ed3_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1224,7 +1272,7 @@
       "booth_id": "4470157",
       "image": "https://booth.pximg.net/c/620x620/3f709dc5-9760-40ac-be9f-324b72f51b12/i/4470157/ed876d9c-3762-4d98-8f98-1b97040cf0ac_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1232,7 +1280,7 @@
       "booth_id": "4470422",
       "image": "https://booth.pximg.net/c/620x620/d2f2fcc0-5379-419a-8236-02982e6689be/i/4470422/b38dabe0-5ce7-4b16-bf9e-fa1b94ec2cb2_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1240,7 +1288,7 @@
       "booth_id": "4474932",
       "image": "https://booth.pximg.net/c/620x620/6775a207-d93d-40a7-94ec-233ee92c8b47/i/4474932/977fd466-50b8-4a6d-b8b2-3311b5113fb0_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1248,7 +1296,7 @@
       "booth_id": "4477171",
       "image": "https://booth.pximg.net/c/620x620/7a8f0b9d-96c4-49a6-9466-1af68cb8a98d/i/4477171/a04204f8-a7ee-4cd7-bbd6-f0138b04c3be_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1265,7 +1313,7 @@
       "booth_id": "4499643",
       "image": "https://booth.pximg.net/c/620x620/a2869756-e0a0-4fc5-ab0f-97fe99e4657b/i/4499643/50853d41-d651-40d6-9772-7e82be721622_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1273,7 +1321,7 @@
       "booth_id": "4508865",
       "image": "https://booth.pximg.net/c/620x620/34d49f99-5c26-4a38-a9bc-9abbed277c12/i/4508865/61094873-6bc1-43b0-a38b-1d23242089b3_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1290,7 +1338,7 @@
       "booth_id": "4512476",
       "image": "https://booth.pximg.net/c/620x620/1a3d7c54-a290-40a4-b267-0f2e041fef9a/i/4512476/8d944e4a-76bd-4f50-8e00-a8e6330366c4_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1298,7 +1346,7 @@
       "booth_id": "4516222",
       "image": "https://booth.pximg.net/c/620x620/2bbfc6cd-c88d-4f80-8d45-2066fcd51c78/i/4516222/dd13157d-27d2-40ff-a2f9-f678f9e0a730_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1306,7 +1354,7 @@
       "booth_id": "4516700",
       "image": "https://booth.pximg.net/c/620x620/d12b2094-f23f-4e9c-a1ca-06611e10cd16/i/4516700/15718f93-fbed-46e7-bead-7ea90c385dab_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1314,7 +1362,7 @@
       "booth_id": "4517549",
       "image": "https://booth.pximg.net/c/620x620/7052d155-3c0c-44ff-a637-7ac13ba9173a/i/4517549/78273457-6fa5-4a15-af92-95a9f924fdbd_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1324,7 +1372,7 @@
       "tags": [
         "Kikyo",
         "Komado",
-        "Mamefriend",
+        "Mamefriends",
         "Maya",
         "Rindo",
         "Selestia"
@@ -1343,7 +1391,7 @@
       "booth_id": "4529148",
       "image": "https://booth.pximg.net/c/620x620/487f373a-6e7a-4ed6-9583-c29af0ec72fc/i/4529148/c050542a-fe22-41ec-b2fe-afe6b7acfbae_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1351,7 +1399,7 @@
       "booth_id": "4533316",
       "image": "https://booth.pximg.net/c/620x620/006f92f5-6fd7-4014-baea-7bc32e3cf196/i/4533316/f22da2cf-dbc6-4b67-9f1b-182bbd18c0af_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1359,7 +1407,7 @@
       "booth_id": "4540826",
       "image": "https://booth.pximg.net/c/620x620/dc0b6b8e-04c3-4283-9d2a-176f69bb3adc/i/4540826/77180663-5746-4fee-9dbe-143c65ffe8a7_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1367,7 +1415,7 @@
       "booth_id": "4553377",
       "image": "https://booth.pximg.net/c/620x620/22cea8e8-bd33-4aa3-8c41-25368c985de8/i/4553377/dda65fd9-77a2-4f18-be94-8c59bc4fc78e_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1375,7 +1423,7 @@
       "booth_id": "4554520",
       "image": "https://booth.pximg.net/c/620x620/17739fd8-4838-417e-9bd4-6a582a04d729/i/4554520/caa7b6f8-7663-41c8-aa67-d3d7b7c1fb40_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1383,7 +1431,7 @@
       "booth_id": "4564025",
       "image": "https://booth.pximg.net/c/620x620/27c22487-d64e-42f9-baeb-0e0d5dfc0cf1/i/4564025/ff80cddf-bb0a-410c-94a6-0578cf2a8ba2_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1391,7 +1439,7 @@
       "booth_id": "4564988",
       "image": "https://www.dropbox.com/scl/fi/33knhy66a3hv1cr2td6mk/4564988.jpg?rlkey=5f8fftnok3nhbqqei8xb1g406&dl=1",
       "tags": [
-        "Mamefriend",
+        "Mamefriends",
         "Rindo"
       ]
     },
@@ -1400,7 +1448,7 @@
       "booth_id": "4570529",
       "image": "https://booth.pximg.net/c/620x620/22cea8e8-bd33-4aa3-8c41-25368c985de8/i/4570529/038f8f30-85a3-4254-987c-fd5feb6100b7_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1409,7 +1457,7 @@
       "image": "https://booth.pximg.net/c/620x620/0a78a3b2-5652-4293-b9e3-1105adf9cc64/i/4581033/6126058d-98b5-4fd9-abc3-f27b2a89b88c_base_resized.jpg",
       "tags": [
         "Kikyo",
-        "Mamefriend",
+        "Mamefriends",
         "Maya",
         "Selestia"
       ]
@@ -1443,7 +1491,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Miyo",
@@ -1463,7 +1511,7 @@
       "booth_id": "4592661",
       "image": "https://booth.pximg.net/c/620x620/765ef6dd-cbb7-4e23-ad40-51e83c1a9963/i/4592661/fb088dec-7d62-49c0-8feb-cba1018f4db6_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1471,7 +1519,7 @@
       "booth_id": "4595311",
       "image": "https://booth.pximg.net/c/620x620/53736367-44ab-4339-b951-90f318f8c00d/i/4595311/c4af2cba-5f10-4cc4-bb34-a1fe34c614c6_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1479,7 +1527,7 @@
       "booth_id": "4600673",
       "image": "https://booth.pximg.net/c/620x620/9500d031-bb77-48f4-afb3-c874610623b0/i/4600673/43f097bc-5fb5-4f5f-b693-46d55a4ad62e_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1506,7 +1554,7 @@
       "booth_id": "4604161",
       "image": "https://booth.pximg.net/c/620x620/53736367-44ab-4339-b951-90f318f8c00d/i/4604161/3bc84001-f962-4aa9-9e1d-181f729968bb_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1514,7 +1562,7 @@
       "booth_id": "4605438",
       "image": "https://booth.pximg.net/c/620x620/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/4605438/976b7d8e-fecc-49e2-92be-dab2b4f82551_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1523,7 +1571,7 @@
       "image": "https://booth.pximg.net/c/620x620/a6ae9650-b49a-45a8-b054-2fffbda8a4f3/i/4609900/7ecf7ca2-7575-4c08-bee3-014afb5350e1_base_resized.jpg",
       "tags": [
         "Kikyo",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Miyo",
@@ -1537,7 +1585,7 @@
       "booth_id": "4611060",
       "image": "https://booth.pximg.net/c/620x620/2aca5456-6275-4dcf-a137-686ab65a2452/i/4611060/1c8d1af7-9833-447b-a7aa-cd06ac8ef38e_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1567,7 +1615,7 @@
       "booth_id": "4614963",
       "image": "https://booth.pximg.net/c/620x620/b50bab83-fa0e-498a-b667-91735fc1042e/i/4614963/b91a0e48-cada-4c61-b389-0cbdaa258062_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1584,7 +1632,7 @@
       "booth_id": "4619286",
       "image": "https://booth.pximg.net/c/620x620/b6334ced-5e5e-4d54-a755-a52e7eff9591/i/4619286/b57f110a-7cb6-49d4-b74d-175da3cbed0d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1592,7 +1640,7 @@
       "booth_id": "4619498",
       "image": "https://booth.pximg.net/c/620x620/fcae2c53-fac0-4c05-8ca1-da8c390b6dc0/i/4619498/c20e973a-bd0c-4df7-a401-32feebda1a2b_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1600,7 +1648,7 @@
       "booth_id": "4620838",
       "image": "https://booth.pximg.net/c/620x620/b0df91e5-2ed1-43d4-a8be-f427d24b6fa7/i/4620838/184cdda9-3b42-4dfd-9475-5df788f5a22e_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1608,7 +1656,7 @@
       "booth_id": "4627598",
       "image": "https://booth.pximg.net/c/620x620/22cea8e8-bd33-4aa3-8c41-25368c985de8/i/4627598/9de2e8ad-9dd1-4a79-9534-a3c186d78e03_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1632,7 +1680,7 @@
       "booth_id": "4636547",
       "image": "https://www.dropbox.com/scl/fi/032jaecx0whcv4ut3dhnm/4636547.jpg?rlkey=5b550sy3lsvdsws423hhwu2ec&dl=1",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1640,7 +1688,7 @@
       "booth_id": "4647676",
       "image": "https://www.dropbox.com/scl/fi/osyt9k3wlfckzz6kpfwws/4647676.jpg?rlkey=2qpo5qlshdsscb88ozvr6lju3&dl=1",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1648,7 +1696,7 @@
       "booth_id": "4650286",
       "image": "https://booth.pximg.net/c/620x620/6ac520e2-dfd8-477e-9359-f46b63d649f1/i/4650286/0b9000a3-50a2-48a8-8d5e-b51f643d7dcf_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1656,7 +1704,7 @@
       "booth_id": "4651757",
       "image": "https://booth.pximg.net/c/620x620/45833893-056f-4bc1-8ce2-f45b74805f4c/i/4651757/218c2cba-5aba-453e-b157-f9c42b0528c3_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1664,7 +1712,7 @@
       "booth_id": "4656786",
       "image": "https://www.dropbox.com/scl/fi/3frewauo49mspsg83yfwp/4656786.jpg?rlkey=epzb8pm0exeijag5lyrsk6vel&dl=1",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1680,7 +1728,7 @@
       "booth_id": "4666398",
       "image": "https://booth.pximg.net/c/620x620/3857b184-6bf8-4ffd-89e8-9ebbb93936a5/i/4666398/5d791399-ccd5-49f8-a4ad-ef38e462b101_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1721,7 +1769,7 @@
       "booth_id": "4675494",
       "image": "https://booth.pximg.net/c/620x620/817e9a9a-020c-4fac-8b21-96f80d6e25cb/i/4675494/43a73db8-8f31-42de-9dbf-fd223b2eb360_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1865,7 +1913,7 @@
       "booth_id": "4757281",
       "image": "https://booth.pximg.net/c/620x620/765ef6dd-cbb7-4e23-ad40-51e83c1a9963/i/4757281/e954980c-beaf-4247-bc17-707ed6af2d52_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -1890,7 +1938,7 @@
       "booth_id": "4769279",
       "image": "https://booth.pximg.net/c/620x620/9500d031-bb77-48f4-afb3-c874610623b0/i/4769279/89f5f170-f865-4146-b658-e50a508d3ada_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2014,7 +2062,7 @@
       "booth_id": "4837086",
       "image": "https://booth.pximg.net/c/620x620/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/4837086/e1ea6615-df2d-4110-a38f-262e5bc64e41_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2082,7 +2130,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Moe",
@@ -2095,7 +2143,7 @@
       "booth_id": "4851792",
       "image": "https://booth.pximg.net/c/620x620/89993d71-03c3-49c8-a2b5-d2080469b92e/i/4851792/b6ec3ca3-5a7c-4a1e-9fb4-f5eea99dddfa_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2161,7 +2209,7 @@
       "booth_id": "4866561",
       "image": "https://booth.pximg.net/c/620x620/5d2f52b0-3a5e-4930-a874-ad1a7b5c47ad/i/4866561/7e9dae56-3ca7-4219-bf69-2e6fb9941edd_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2226,7 +2274,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Moe",
@@ -2239,7 +2287,7 @@
       "booth_id": "4891330",
       "image": "https://booth.pximg.net/c/620x620/72ec147f-8f0b-4171-82b3-2f7c19c6d4a2/i/4891330/4815ce09-827f-46fd-90ab-4ab52e68525f_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2284,7 +2332,7 @@
       "booth_id": "4901567",
       "image": "https://booth.pximg.net/c/620x620/22cea8e8-bd33-4aa3-8c41-25368c985de8/i/4901567/e60b673e-b740-4729-8213-2a174ace5a7b_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2307,7 +2355,7 @@
       "booth_id": "4910121",
       "image": "https://booth.pximg.net/c/620x620/9500d031-bb77-48f4-afb3-c874610623b0/i/4910121/479bd39a-31ea-4873-91be-4ed593c1bdc2_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2378,7 +2426,7 @@
       "booth_id": "4924552",
       "image": "https://booth.pximg.net/c/620x620/5d2f52b0-3a5e-4930-a874-ad1a7b5c47ad/i/4924552/7735fa13-5d83-4a47-8217-4213c7a3f21f_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2386,7 +2434,7 @@
       "booth_id": "4926940",
       "image": "https://booth.pximg.net/c/620x620/43c0001f-17c4-433c-a407-91857ce61242/i/4926940/78bd59a0-23c9-4a5a-b49e-195731ebed50_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2414,7 +2462,7 @@
       "booth_id": "4943595",
       "image": "https://booth.pximg.net/c/620x620/d12dc72a-7626-4062-982e-bde591398b2f/i/4943595/572b8f59-0226-491f-834d-b523a5eb6d8f_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2482,7 +2530,7 @@
       "booth_id": "4957681",
       "image": "https://booth.pximg.net/c/620x620/43c0001f-17c4-433c-a407-91857ce61242/i/4957681/c42c4099-a357-4221-8b28-b0b004f42cda_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2490,7 +2538,7 @@
       "booth_id": "4958663",
       "image": "https://booth.pximg.net/c/620x620/d2efab32-f146-4e62-9976-c7407dc9e476/i/4958663/2bd2d2ea-2296-402a-b22f-7924efc91a87_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2573,7 +2621,7 @@
       "booth_id": "4983099",
       "image": "https://booth.pximg.net/c/620x620/ae1d8a4d-f73a-4547-91c5-a02c7133ed50/i/4983099/0f4ef814-52e9-454a-a045-479da81088fd_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2618,7 +2666,7 @@
       "booth_id": "4995190",
       "image": "https://booth.pximg.net/c/620x620/9500d031-bb77-48f4-afb3-c874610623b0/i/4995190/ff80058d-c215-42a8-a493-b95bd99dd399_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2650,7 +2698,7 @@
       "booth_id": "5002021",
       "image": "https://booth.pximg.net/c/620x620/cd10c0e8-e0cf-4abb-bdbf-0e1ad73cb792/i/5002021/a92d853e-8f98-4c1e-8cde-516cb277232b_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2688,7 +2736,7 @@
       "booth_id": "5009133",
       "image": "https://www.dropbox.com/scl/fi/d66wgkvkvgkm2lg0tijrv/5009133.jpg?rlkey=dyumlj23252zng3e9vhgms2ej&dl=1",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -2718,7 +2766,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Moe",
@@ -2815,7 +2863,7 @@
         "Cian",
         "Komado",
         "Mafuyu",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka"
       ]
     },
@@ -2883,7 +2931,7 @@
       "booth_id": "5056374",
       "image": "https://booth.pximg.net/c/620x620/6b961a0f-b628-4c5c-bcb0-27658169e5ae/i/5056374/4ddece18-75d3-4a0c-82a8-f588b38c1e0d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3136,7 +3184,7 @@
       "booth_id": "5081472",
       "image": "https://booth.pximg.net/c/620x620/6ac520e2-dfd8-477e-9359-f46b63d649f1/i/5081472/c05698a3-3169-4f4a-8099-a4bed806612e_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3178,7 +3226,7 @@
       "booth_id": "5084797",
       "image": "https://booth.pximg.net/c/620x620/cd10c0e8-e0cf-4abb-bdbf-0e1ad73cb792/i/5084797/e87fd923-c191-4dfa-a876-e9f4782d51da_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3553,7 +3601,7 @@
       "booth_id": "5153941",
       "image": "https://booth.pximg.net/c/620x620/6ac520e2-dfd8-477e-9359-f46b63d649f1/i/5153941/e4f097aa-9c49-4529-bf68-ce0fd37cb220_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3569,7 +3617,7 @@
       "booth_id": "5162960",
       "image": "https://booth.pximg.net/c/620x620/9500d031-bb77-48f4-afb3-c874610623b0/i/5162960/04019335-a05b-4f7e-b546-9cfb5b92a090_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3615,7 +3663,7 @@
       "booth_id": "5170131",
       "image": "https://booth.pximg.net/c/620x620/d12b2094-f23f-4e9c-a1ca-06611e10cd16/i/5170131/06a03785-6699-4daa-b553-306f4711eaa1_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3637,7 +3685,7 @@
       "booth_id": "5181218",
       "image": "https://booth.pximg.net/c/620x620/bdcbf341-bc5a-46cb-9290-e7cf9c1d965d/i/5181218/06cd29ea-1d2e-419b-8e6e-899168c8251d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3661,7 +3709,7 @@
       "booth_id": "5193639",
       "image": "https://booth.pximg.net/c/620x620/6ac520e2-dfd8-477e-9359-f46b63d649f1/i/5193639/c0ad6507-38db-4593-8a0a-c899434a21da_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3705,7 +3753,7 @@
       "booth_id": "5198442",
       "image": "https://booth.pximg.net/c/620x620/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/5198442/680f34f5-d50a-4c9d-9b3a-b18dfda1a46b_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3713,7 +3761,7 @@
       "booth_id": "5203007",
       "image": "https://booth.pximg.net/c/620x620/de5699df-0238-4c91-8e89-596c5b484672/i/5203007/86695c5d-707b-4832-8fd1-b6736a7c1e9a_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3791,7 +3839,7 @@
       "booth_id": "5213624",
       "image": "https://booth.pximg.net/c/620x620/53736367-44ab-4339-b951-90f318f8c00d/i/5213624/6246943a-f742-4ccf-81d3-ad56801fa256_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3864,7 +3912,7 @@
       "booth_id": "5227549",
       "image": "https://booth.pximg.net/c/620x620/22cea8e8-bd33-4aa3-8c41-25368c985de8/i/5227549/cca2b8d6-5e64-4412-b426-5033149b1a35_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3886,7 +3934,7 @@
       "booth_id": "5239632",
       "image": "https://booth.pximg.net/c/620x620/29ee00c6-9609-4079-8083-e4ae64e7327a/i/5239632/23f7e9d7-19a1-4d67-ab6d-fd59800265fb_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -3988,7 +4036,7 @@
       "booth_id": "5256167",
       "image": "https://www.dropbox.com/scl/fi/rgswvzif99zmt5zl7rbui/5256167.jpg?rlkey=glcs4crq0iu9cy67prin8ogrd&dl=1",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -4004,7 +4052,7 @@
       "booth_id": "5268308",
       "image": "https://booth.pximg.net/c/620x620/1725c620-cb52-48f4-87a7-e76f99883f97/i/5268308/4065d0fa-7712-417d-8f7a-0a894cdb02e8_base_resized.jpg",
       "tags": [
-        "Mamefriend",
+        "Mamefriends",
         "Shinano"
       ]
     },
@@ -4158,7 +4206,7 @@
         "Kikyo",
         "Lime",
         "Mafuyu",
-        "Mamefriend",
+        "Mamefriends",
         "Maya",
         "Moe",
         "Plum",
@@ -4237,7 +4285,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mizuki",
         "Moe",
@@ -4291,7 +4339,7 @@
       "booth_id": "5352798",
       "image": "https://booth.pximg.net/c/620x620/76eb012e-8e30-4474-bd94-adc7eb61f7ed/i/5352798/6368d378-aae9-47b0-a910-40cd6a7a8146_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -4372,7 +4420,7 @@
       "booth_id": "5375257",
       "image": "https://booth.pximg.net/c/620x620/41681e56-add5-4e7a-a12b-489de68f5eca/i/5375257/e363c5ea-1116-4869-a910-b1242cf8c320_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -4380,7 +4428,7 @@
       "booth_id": "5378679",
       "image": "https://booth.pximg.net/c/620x620/c80ffe79-d9d7-4481-bc64-40d80bcd71e6/i/5378679/804ad111-4fd1-42c8-a8f5-60eca242c8fb_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -4388,7 +4436,7 @@
       "booth_id": "5380156",
       "image": "https://booth.pximg.net/c/620x620/84f0ea50-39ce-4bb8-b0a2-dd67eac600cc/i/5380156/e466abab-5993-4eb4-8ff3-73475c67b9c7_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -4674,7 +4722,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Mizuki",
@@ -4692,7 +4740,7 @@
       "tags": [
         "Kikyo",
         "Komano",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Minase",
         "Shinano",
@@ -4725,7 +4773,7 @@
       "booth_id": "5460941",
       "image": "https://booth.pximg.net/c/620x620/8b62109e-a51e-4c25-9322-c3227df3ef18/i/5460941/2a83eca7-8247-4ca4-8e86-f3d40b4bd49a_base_resized.jpg",
       "tags": [
-        "Mamefriend",
+        "Mamefriends",
         "PlusHead"
       ]
     },
@@ -4912,7 +4960,7 @@
       "booth_id": "5505086",
       "image": "https://booth.pximg.net/c/620x620/59f0fee1-660b-454c-9879-cb3650ac21ec/i/5505086/b73530ae-9027-4edf-ad08-106acbc7aa66_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -5014,7 +5062,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Moe",
         "Plum",
@@ -5261,7 +5309,7 @@
       "booth_id": "5591338",
       "image": "https://booth.pximg.net/c/620x620/cd10c0e8-e0cf-4abb-bdbf-0e1ad73cb792/i/5591338/34f20eef-545e-4cf5-aae0-789135c41f06_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -5296,7 +5344,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Moe",
         "Plum"
@@ -5425,7 +5473,7 @@
       "booth_id": "5633356",
       "image": "https://booth.pximg.net/c/620x620/7abb3805-8abc-4e8f-a1a2-3ace0dcaf291/i/5633356/47052499-e0c3-4ca1-bb83-f2cb04870c9a_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -5607,7 +5655,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Moe",
         "Plum",
@@ -5631,7 +5679,7 @@
       "booth_id": "5663945",
       "image": "https://booth.pximg.net/c/620x620/c5847de5-5a78-43ab-b71b-3238a0799830/i/5663945/2fb5b260-b1d3-4765-b436-630dcc110f36_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -5716,7 +5764,7 @@
       "booth_id": "5694462",
       "image": "https://booth.pximg.net/c/620x620/0b553cf3-9222-4abe-bc27-60aa8907d63d/i/5694462/24dff1d8-40aa-4a58-899a-4dfa4e62d774_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -5767,7 +5815,7 @@
       "booth_id": "5706261",
       "image": "https://booth.pximg.net/c/620x620/cd10c0e8-e0cf-4abb-bdbf-0e1ad73cb792/i/5706261/f2d8e71d-8019-44e1-8940-f7d1b450935c_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -5816,7 +5864,7 @@
       "booth_id": "5728411",
       "image": "https://booth.pximg.net/c/620x620/521a74f4-d91c-4d3d-8805-45d60b2b6171/i/5728411/baf3157b-1be3-49ed-a41d-5f15b20785a6_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -5947,7 +5995,7 @@
       "booth_id": "5773484",
       "image": "https://booth.pximg.net/c/620x620/2550b366-f669-4e1c-9544-d64e22ca6e6c/i/5773484/204144e5-f311-4fb5-addd-851c7655d4ac_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -5992,7 +6040,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Moe",
@@ -6051,7 +6099,7 @@
         "Kikyo",
         "Komano",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Minase",
         "Moe",
@@ -6376,7 +6424,7 @@
       "booth_id": "5886016",
       "image": "https://booth.pximg.net/c/620x620/b49053c8-d243-47f0-a778-0954555fff43/i/5886016/76bda27a-70e5-4c03-bc09-6b278e01bff6_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6400,7 +6448,7 @@
       "booth_id": "5899058",
       "image": "https://booth.pximg.net/c/620x620/3f4979ee-4c70-446d-b602-b10503b20cdd/i/5899058/120dd98e-3c2d-4b8a-a2e4-9b483fae9f54_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6408,7 +6456,7 @@
       "booth_id": "5900411",
       "image": "https://booth.pximg.net/c/620x620/f67a84c9-acc7-4d7b-bdc9-5c942bd5ced3/i/5900411/0f65b819-71b0-4e9a-9777-63cec7ba020f_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6416,7 +6464,7 @@
       "booth_id": "5903993",
       "image": "https://booth.pximg.net/c/620x620/2bbfc6cd-c88d-4f80-8d45-2066fcd51c78/i/5903993/6f78db60-2082-4e4a-92a6-2f8a9096ef8a_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6432,7 +6480,7 @@
       "booth_id": "5908329",
       "image": "https://booth.pximg.net/c/620x620/765ef6dd-cbb7-4e23-ad40-51e83c1a9963/i/5908329/268bc6e7-2700-49c5-b7b7-5fa72bb1dd8f_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6440,7 +6488,7 @@
       "booth_id": "5908528",
       "image": "https://booth.pximg.net/c/620x620/27c22487-d64e-42f9-baeb-0e0d5dfc0cf1/i/5908528/f291ca7a-e5e0-4a52-8afe-85b684b15600_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6448,7 +6496,7 @@
       "booth_id": "5910271",
       "image": "https://booth.pximg.net/c/620x620/8e386120-57dc-49c3-b41a-d573c3fdd582/i/5910271/119d04dd-03e3-4928-b94f-411d21532cc3_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6460,7 +6508,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Mizuki",
@@ -6477,7 +6525,7 @@
       "booth_id": "5913306",
       "image": "https://booth.pximg.net/c/620x620/0372607e-2a94-472f-9f9b-6c6d654b5286/i/5913306/94c1cfae-fb9f-4ac0-b229-610e09cc40cf_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6485,7 +6533,7 @@
       "booth_id": "5919763",
       "image": "https://booth.pximg.net/c/620x620/08a099c5-9417-496e-a871-50778d1832b0/i/5919763/f0df68b4-68d1-4d3c-8f90-c021e8a8ddad_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6493,7 +6541,7 @@
       "booth_id": "5921145",
       "image": "https://booth.pximg.net/c/620x620/bd0414b0-e933-4670-a254-9e58c21afc5c/i/5921145/b5a7671d-a8d2-4cd7-a425-2574a5a53b1f_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6501,7 +6549,7 @@
       "booth_id": "5922237",
       "image": "https://booth.pximg.net/c/620x620/ae9b8a2a-8c11-423b-a091-a0b7332109d9/i/5922237/0d2f429d-1ee4-4bcd-ba1e-99fd81da56e0_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6509,7 +6557,7 @@
       "booth_id": "5928341",
       "image": "https://booth.pximg.net/c/620x620/ba557560-1aa1-433d-8f43-3eea697b3cb6/i/5928341/de4bee2f-a7dc-4c86-a837-9b61a182922b_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6525,7 +6573,7 @@
       "booth_id": "5937600",
       "image": "https://booth.pximg.net/c/620x620/59b59afa-7019-4b2e-92c5-4cf903f0964b/i/5937600/b0ec9018-f4d3-4f1c-9ccc-4cdd6010c178_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6545,7 +6593,7 @@
       "booth_id": "5946738",
       "image": "https://booth.pximg.net/c/620x620/8c103339-63b6-487f-af05-cfc73702a119/i/5946738/3c99a341-3f64-44d5-a980-30cd20cfe59a_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6553,7 +6601,7 @@
       "booth_id": "5951792",
       "image": "https://booth.pximg.net/c/620x620/cd10c0e8-e0cf-4abb-bdbf-0e1ad73cb792/i/5951792/fb9335cc-fa31-4251-b787-b646c751bf8d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6561,7 +6609,7 @@
       "booth_id": "5952316",
       "image": "https://booth.pximg.net/c/620x620/8dd04188-39b9-4801-8550-76aa21aaa4c5/i/5952316/e396537e-4cd7-4bb6-952e-ef509a49d260_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6578,7 +6626,7 @@
       "booth_id": "5961921",
       "image": "https://booth.pximg.net/c/620x620/d12dc72a-7626-4062-982e-bde591398b2f/i/5961921/5bb61934-2760-41d0-b577-e67bd7848fcb_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6586,7 +6634,7 @@
       "booth_id": "5965834",
       "image": "https://booth.pximg.net/c/620x620/c5447176-130a-42b3-b8cf-8875d9713374/i/5965834/60daaaed-cc2b-4461-8aa2-d68c8c3e5124_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6594,7 +6642,7 @@
       "booth_id": "5970374",
       "image": "https://booth.pximg.net/c/620x620/80f91901-dc7c-499e-b1f5-d6c2821a2372/i/5970374/ee1f778a-fb1e-45b9-97b6-3bead507c4ad_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6602,7 +6650,7 @@
       "booth_id": "5971074",
       "image": "https://booth.pximg.net/c/620x620/a5df68b2-f3ac-40b8-8d79-af96a90030da/i/5971074/db81ff62-e35e-4b4e-a587-9446554562bc_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6631,7 +6679,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Moe",
         "Plum",
@@ -6644,7 +6692,7 @@
       "booth_id": "5983817",
       "image": "https://booth.pximg.net/c/620x620/de845357-00ed-468b-a3ef-0742507f4544/i/5983817/3552fee9-860d-42be-8d23-d73d66ba1542_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -6731,7 +6779,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Moe",
@@ -6756,7 +6804,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Moe",
         "Plum",
@@ -6869,7 +6917,7 @@
       "tags": [
         "Komano",
         "Kuuta",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Minase",
         "PlusHead",
@@ -6884,7 +6932,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Plum"
       ]
@@ -6947,7 +6995,7 @@
         "Eku",
         "Lime",
         "Mafuyu",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mao",
         "Milfy",
@@ -6970,7 +7018,7 @@
         "Eku",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milfy",
         "Moe",
@@ -7027,7 +7075,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Moe",
@@ -7045,7 +7093,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mao",
         "Mizuki",
@@ -7225,7 +7273,7 @@
       "booth_id": "6133567",
       "image": "https://booth.pximg.net/c/620x620/4adc6e10-30c0-4078-bfad-f97ebd827202/i/6133567/d08a634b-2d9a-456a-8f2d-79bb41a8b868_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7273,7 +7321,7 @@
       "booth_id": "6141910",
       "image": "https://booth.pximg.net/c/620x620/eae27b23-06b8-4864-83e1-b0633e8964d9/i/6141910/18b9eddd-f3a0-476c-982a-f0a509beb2ec_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7281,7 +7329,7 @@
       "booth_id": "6144101",
       "image": "https://booth.pximg.net/c/620x620/c5728907-8f2a-4fee-a5d1-2c46f2e7eb90/i/6144101/de2adf15-d01f-40c0-b358-7b5e92c93410_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7307,7 +7355,7 @@
         "Lasyusha",
         "Lime",
         "Mafuyu",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mizuki",
         "Moe",
@@ -7370,7 +7418,7 @@
       "booth_id": "6164470",
       "image": "https://booth.pximg.net/c/620x620/dd91b5cd-8256-4550-b017-41a00490ff7e/i/6164470/9b068ce8-9979-40c2-bf2e-900bac18b3f8_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7463,7 +7511,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Moe",
         "Plum",
@@ -7499,7 +7547,7 @@
       "booth_id": "6212073",
       "image": "https://booth.pximg.net/c/620x620/966ceec4-90f0-40de-bc4e-eb043c0cc765/i/6212073/a70a3d48-e451-41f3-9eca-65b3970e0437_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7511,7 +7559,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mizuki",
         "Moe",
@@ -7552,7 +7600,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Plum"
       ]
     },
@@ -7561,7 +7609,7 @@
       "booth_id": "6221311",
       "image": "https://booth.pximg.net/c/620x620/d12b2094-f23f-4e9c-a1ca-06611e10cd16/i/6221311/7f7728f8-7ba1-4c72-8474-bc153413d9b3_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7569,7 +7617,7 @@
       "booth_id": "6225720",
       "image": "https://booth.pximg.net/c/620x620/6ac520e2-dfd8-477e-9359-f46b63d649f1/i/6225720/679fb5fe-49c2-4a59-a08a-059a26a8dde3_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7583,7 +7631,7 @@
         "Kikyo",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Maya",
         "Mizuki",
@@ -7615,7 +7663,7 @@
       "booth_id": "6242599",
       "image": "https://booth.pximg.net/c/620x620/eae27b23-06b8-4864-83e1-b0633e8964d9/i/6242599/b6449269-b334-49df-ae1a-f3db2c609760_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7628,7 +7676,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Moe",
         "Plum",
@@ -7665,7 +7713,7 @@
         "Eku",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milfy",
         "Mizuki",
@@ -7691,7 +7739,7 @@
       "booth_id": "6293769",
       "image": "https://booth.pximg.net/c/620x620/ac70ad33-2b30-45e2-933b-33eb76b5fa55/i/6293769/8b446b0a-ba7e-4776-8996-db321f2b0cd5_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7703,7 +7751,7 @@
         "Chocolat",
         "Komado",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Plum"
       ]
     },
@@ -7729,7 +7777,7 @@
       "booth_id": "6300291",
       "image": "https://booth.pximg.net/c/620x620/0ae50e88-f89c-416c-abb8-33ed60f61f79/i/6300291/c51c3bdd-7fa7-4e00-a552-62619933e557_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7741,7 +7789,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mao",
         "Mizuki",
@@ -7807,7 +7855,7 @@
       "booth_id": "6348457",
       "image": "https://booth.pximg.net/c/620x620/047bf8d0-5c3f-4250-810b-c635df3dd199/i/6348457/f25e389b-df60-4384-b76c-6f7742c31bd5_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7842,7 +7890,7 @@
       "booth_id": "6352159",
       "image": "https://booth.pximg.net/c/620x620/7da24e1c-0082-4758-a213-b3b7ad59ca11/i/6352159/29f53837-e4c1-4af5-b0ee-36964bda65dc_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7850,7 +7898,7 @@
       "booth_id": "6356117",
       "image": "https://booth.pximg.net/c/620x620/dd91b5cd-8256-4550-b017-41a00490ff7e/i/6356117/0b801ae3-1757-4b1c-a4b9-58bd85139c76_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7866,7 +7914,7 @@
       "booth_id": "6359455",
       "image": "https://booth.pximg.net/c/620x620/4adc6e10-30c0-4078-bfad-f97ebd827202/i/6359455/60386d41-7b23-4bb5-b6f6-d4d264a24978_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7929,7 +7977,7 @@
       "booth_id": "6405212",
       "image": "https://booth.pximg.net/c/620x620/b50bab83-fa0e-498a-b667-91735fc1042e/i/6405212/6f442483-f557-4050-a4e8-1aa8dafd1319_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -7969,7 +8017,7 @@
         "Cian",
         "Lime",
         "Mafuyu",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mizuki",
         "Plum",
@@ -8133,7 +8181,7 @@
         "Chocolat",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Moe",
         "Plum",
@@ -8148,7 +8196,7 @@
       "booth_id": "6530524",
       "image": "https://booth.pximg.net/c/620x620/0525abd3-3157-42d0-bc73-7463b992e522/i/6530524/f2511a6d-b89c-4f2f-9a20-b57739dfb073_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8182,7 +8230,7 @@
       "booth_id": "6558163",
       "image": "https://booth.pximg.net/c/620x620/f51d1130-7ae4-472c-866a-ce0d4ee4f260/i/6558163/0e4ce659-d55b-40a5-8c49-8a5bb10b4e9c_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8236,7 +8284,7 @@
         "Eku",
         "Kikyo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milfy",
         "Mizuki",
@@ -8254,7 +8302,7 @@
       "booth_id": "6588091",
       "image": "https://booth.pximg.net/c/620x620/e2febaba-cfd6-4285-86fa-a25e19651f9d/i/6588091/68b82a2c-ea8f-4834-8288-88cc9a997b53_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8310,7 +8358,7 @@
       "booth_id": "6633451",
       "image": "https://booth.pximg.net/c/620x620/d12b2094-f23f-4e9c-a1ca-06611e10cd16/i/6633451/59817a7f-4b9c-461c-9da3-14586871f6c9_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8324,7 +8372,7 @@
         "Lasyusha",
         "Lime",
         "Mafuyu",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milltina",
         "Mizuki",
@@ -8365,7 +8413,7 @@
       "booth_id": "6676166",
       "image": "https://booth.pximg.net/c/620x620/456e5710-a056-4c9c-b528-d64f5709a820/i/6676166/2b85b0a0-3c46-4d2b-a7d0-78c679fe7141_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8426,7 +8474,7 @@
       "tags": [
         "Eku",
         "Komano",
-        "Mamefriend",
+        "Mamefriends",
         "Milfy",
         "Minase",
         "PlusHead"
@@ -8462,7 +8510,7 @@
         "Chocolat",
         "Eku",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milfy",
         "Milltina",
@@ -8505,7 +8553,7 @@
       "booth_id": "6753995",
       "image": "https://booth.pximg.net/c/620x620/56b5f74b-8215-486e-ad24-5da799a8bd94/i/6753995/70f5fd84-17a0-463f-8c5e-4669bf34a46b_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8513,7 +8561,7 @@
       "booth_id": "6758603",
       "image": "https://booth.pximg.net/c/620x620/c0202495-fbfb-40d5-8c52-e123a5f4ac59/i/6758603/025f5b9d-1483-4e8d-a3d9-75e7bd651f8f_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8584,7 +8632,7 @@
       "booth_id": "6789402",
       "image": "https://booth.pximg.net/c/620x620/a5df68b2-f3ac-40b8-8d79-af96a90030da/i/6789402/9b7faa6d-456a-41d0-8a87-7550b84f06d7_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8592,7 +8640,7 @@
       "booth_id": "6795223",
       "image": "https://booth.pximg.net/c/620x620/1d2fcc41-60b9-4d13-8ff8-e42f0046dda5/i/6795223/5dedbcee-b743-4dd1-ae4b-205fe98e939d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8609,7 +8657,7 @@
         "Lasyusha",
         "Lime",
         "Mafuyu",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mao",
         "Milfy",
@@ -8645,7 +8693,7 @@
       "booth_id": "6809255",
       "image": "https://booth.pximg.net/c/620x620/4d448555-a6cf-41e7-a413-71ca03de8b8c/i/6809255/f77f9938-04e9-4403-a7f0-33523e95474d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8669,7 +8717,7 @@
       "booth_id": "6826664",
       "image": "https://booth.pximg.net/c/620x620/3f4979ee-4c70-446d-b602-b10503b20cdd/i/6826664/e2d93088-ade1-48b9-a33b-0b4519546c00_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8677,7 +8725,7 @@
       "booth_id": "6834468",
       "image": "https://booth.pximg.net/c/620x620/a5df68b2-f3ac-40b8-8d79-af96a90030da/i/6834468/f7fafde5-2a82-4b5c-a2cb-fc323752909f_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8685,7 +8733,7 @@
       "booth_id": "6853110",
       "image": "https://booth.pximg.net/c/620x620/5bc812ef-ae8f-49f6-bdec-49ab6c310d5a/i/6853110/71849754-9a21-436d-98d8-e960b05945c7_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8736,7 +8784,7 @@
         "Kikyo",
         "Lasyusha",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mao",
         "Maya",
@@ -8758,7 +8806,7 @@
       "booth_id": "6952132",
       "image": "https://booth.pximg.net/c/620x620/51e82072-4f3c-4a14-8a28-c2c6eb30ea4d/i/6952132/16664a96-6939-436b-8477-08519e7b9960_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8766,7 +8814,7 @@
       "booth_id": "6952866",
       "image": "https://booth.pximg.net/c/620x620/ac70ad33-2b30-45e2-933b-33eb76b5fa55/i/6952866/59736bf9-79b4-4a3c-829b-55c8a1468a64_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8781,7 +8829,7 @@
         "Eku",
         "Lime",
         "Mafuyu",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milfy",
         "Milltina",
@@ -8818,7 +8866,7 @@
       "booth_id": "6981894",
       "image": "https://booth.pximg.net/c/620x620/3e5bc4c0-a3ad-424d-b495-ec133e46cff5/i/6981894/6cf7dd83-c717-49f6-ad1d-0e766224289d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8853,7 +8901,7 @@
       "booth_id": "6985458",
       "image": "https://booth.pximg.net/c/620x620/ac70ad33-2b30-45e2-933b-33eb76b5fa55/i/6985458/ef507adf-034e-4689-a9e8-2dcc72dbfbc5_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8915,7 +8963,7 @@
       "booth_id": "7026126",
       "image": "https://booth.pximg.net/c/620x620/b9de4fa3-b288-4fd5-953c-b63ab0dede1c/i/7026126/0e2a75e9-7023-4338-933c-665eaa942f0e_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8928,7 +8976,7 @@
         "Chocolat",
         "Eku",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milfy",
         "Mizuki",
@@ -8964,7 +9012,7 @@
       "booth_id": "7043572",
       "image": "https://booth.pximg.net/c/620x620/c362feb3-cd2c-4ac4-9fd6-96468fe022e8/i/7043572/071db16c-ec1d-446a-86ef-b43f091cc1d8_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -8989,7 +9037,7 @@
       "booth_id": "7117115",
       "image": "https://booth.pximg.net/c/620x620/83f32f36-566e-430b-9a1e-5269d0d37666/i/7117115/b3387650-b621-4b89-9bb2-6a714f7c9537_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9050,7 +9098,7 @@
         "Chocolat",
         "Eku",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milfy",
         "Milltina",
@@ -9065,7 +9113,7 @@
       "booth_id": "7206938",
       "image": "https://booth.pximg.net/c/620x620/b4cce45c-8855-4d43-b151-e2945f26a78b/i/7206938/6fa64e63-bcf6-4293-acf7-c761fe531082_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9077,7 +9125,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mizuki",
         "Plum",
@@ -9092,7 +9140,7 @@
       "booth_id": "7243979",
       "image": "https://booth.pximg.net/c/620x620/4adc6e10-30c0-4078-bfad-f97ebd827202/i/7243979/48f0c25e-f49a-41d3-a27d-4980962ec818_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9164,7 +9212,7 @@
       "booth_id": "7280499",
       "image": "https://booth.pximg.net/c/620x620/ac70ad33-2b30-45e2-933b-33eb76b5fa55/i/7280499/94179f37-c368-4c5e-b35b-933d6c0d33ea_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9200,7 +9248,7 @@
       "booth_id": "7296264",
       "image": "https://booth.pximg.net/c/620x620/808d048d-2b05-4f77-b372-5ecd45c931f6/i/7296264/3353a1aa-5079-44f3-a74d-b844ea5c4021_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9229,7 +9277,7 @@
       "booth_id": "7299692",
       "image": "https://booth.pximg.net/c/620x620/b6316c71-a98a-46d2-a005-ab292654e196/i/7299692/3dc17616-695d-43c9-a1b8-e44cd17ed1b8_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9255,7 +9303,7 @@
       "booth_id": "7328196",
       "image": "https://booth.pximg.net/c/620x620/d675d573-36b1-405f-8ea5-3a6314de5f69/i/7328196/bde53c5a-428a-45e8-9d65-ad56a69c47f0_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9379,7 +9427,7 @@
       "booth_id": "7409331",
       "image": "https://booth.pximg.net/c/620x620/ac70ad33-2b30-45e2-933b-33eb76b5fa55/i/7409331/253f4333-ed34-46b8-8a29-139894df3e06_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9418,7 +9466,7 @@
         "Ichigo",
         "Lasyusha",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mao",
         "Milfy",
@@ -9445,7 +9493,7 @@
         "Eku",
         "Lasyusha",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Marycia",
         "Milfy",
@@ -9487,7 +9535,7 @@
       "booth_id": "7435460",
       "image": "https://booth.pximg.net/c/620x620/9b848a34-1709-48fa-bb41-14857176b13e/i/7435460/e7a14a75-24d0-4814-943f-57ebcf87686d_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9501,7 +9549,7 @@
         "Eku",
         "Ichigo",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Mao",
         "Milfy",
@@ -9617,7 +9665,7 @@
         "Hanka",
         "Komano",
         "Lasyusha",
-        "Mamefriend",
+        "Mamefriends",
         "Mao",
         "Minase",
         "Mizuki",
@@ -9659,7 +9707,7 @@
       "booth_id": "7469596",
       "image": "https://booth.pximg.net/c/620x620/cd351df1-167a-4572-9c99-cecf0b39143d/i/7469596/e5aeba76-ad9c-41df-9e0d-7255c3e3a4c7_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9792,7 +9840,7 @@
       "booth_id": "7551750",
       "image": "https://booth.pximg.net/c/620x620/6338b7d7-bd1f-476f-950e-2292c2618d62/i/7551750/e6072dff-cb08-4f1d-869d-46fccb677df9_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9826,7 +9874,7 @@
         "Ichigo",
         "Lime",
         "Lumina",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Marycia",
         "Milfy",
@@ -9854,7 +9902,7 @@
       "booth_id": "7575212",
       "image": "https://booth.pximg.net/c/620x620/883013f7-1a41-457b-a4b9-6e30e749249f/i/7575212/54ade825-ae6f-401e-a8bf-aeedb4953a7e_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9866,7 +9914,7 @@
         "Chiffon",
         "Chocolat",
         "Lime",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milltina",
         "Plum",
@@ -9878,7 +9926,7 @@
       "booth_id": "7603830",
       "image": "https://booth.pximg.net/c/620x620/b6316c71-a98a-46d2-a005-ab292654e196/i/7603830/20f69b59-d753-4548-a29e-ff5a4ccff7dc_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9886,7 +9934,7 @@
       "booth_id": "7643305",
       "image": "https://booth.pximg.net/c/620x620/b4cce45c-8855-4d43-b151-e2945f26a78b/i/7643305/27594749-3ba2-40f5-b145-e2031d2858f0_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9894,7 +9942,7 @@
       "booth_id": "7648516",
       "image": "https://booth.pximg.net/c/620x620/ddd08181-1eec-434c-9f0c-733bbedfca20/i/7648516/bb725290-7659-43b4-bcc0-b2be12957f87_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9902,7 +9950,7 @@
       "booth_id": "7668256",
       "image": "https://booth.pximg.net/c/620x620/5f858439-ddd5-4ff0-8808-13540eb33a92/i/7668256/64a19197-37d3-4aad-9cdf-869bdd80c375_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9910,7 +9958,7 @@
       "booth_id": "7678680",
       "image": "https://booth.pximg.net/c/620x620/9500d031-bb77-48f4-afb3-c874610623b0/i/7678680/266d2578-774e-47a6-a948-85b4b039fde5_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9936,7 +9984,7 @@
       "booth_id": "7730953",
       "image": "https://booth.pximg.net/c/620x620/62414295-364d-4543-9427-b6ee4cb1135b/i/7730953/da750d8e-f718-4a69-a80d-51e36bbf7789_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9950,7 +9998,7 @@
         "Eku",
         "Lime",
         "Lumina",
-        "Mamefriend",
+        "Mamefriends",
         "Manuka",
         "Milfy",
         "Milltina",
@@ -9966,7 +10014,7 @@
       "booth_id": "7808359",
       "image": "https://booth.pximg.net/c/620x620/bd0414b0-e933-4670-a254-9e58c21afc5c/i/7808359/3ced015d-afd9-4830-a9e5-5f8f9fcacacf_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9974,7 +10022,7 @@
       "booth_id": "7911304",
       "image": "https://booth.pximg.net/c/620x620/d0843461-5889-484b-8e2d-63ccf8281b25/i/7911304/5615a9d5-297c-40ea-b8be-41a5e0f69cb6_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
@@ -9982,7 +10030,7 @@
       "booth_id": "7937900",
       "image": "https://booth.pximg.net/c/620x620/5bc812ef-ae8f-49f6-bdec-49ab6c310d5a/i/7937900/6be20daa-ce80-4f25-9ba8-06e9c8946817_base_resized.jpg",
       "tags": [
-        "Mamefriend"
+        "Mamefriends"
       ]
     },
     {
