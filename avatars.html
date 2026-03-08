@@ -474,21 +474,23 @@ function observeCards(gridId) {
 }
 
 // ── Build a card HTML string ──────────────────────────────────────
-function buildCard(item, extra) {
+function buildCard(item, extra, merge) {
   const rawTags     = item.tags||[];
-  const dispTags    = resolvedTags(item);
+  const dispTags    = resolvedTags(item, merge);
   const resolvedStr = dispTags.map(t => t.toLowerCase()).join('|');
   const tags        = dispTags.map(t => `<span class="item-tag ${tagCls(t)}">${t}</span>`).join('');
   const boothUrl    = item.booth_id ? `https://booth.pm/en/items/${item.booth_id}` : (item.booth_url||'');
   const boothBtn    = boothUrl ? `<a class="booth-btn" href="${boothUrl}" target="_blank" rel="noopener">✦ view on booth</a>` : '';
+  const imgSrc      = item.image || '';
+  const imgClick    = imgSrc ? `onclick="openLightbox('${imgSrc.replace(/'/g,"\\'")}','${(item.booth_id||'').replace(/'/g,"\\'")}');event.stopPropagation()"` : '';
   return `
     <div class="item-card"
          data-name="${esc((item.name||'').toLowerCase())}"
          data-tags="${esc(rawTags.join(',').toLowerCase())}"
          data-resolvedtags="${esc(resolvedStr)}"
-         data-image="${esc(item.image||'')}"
+         data-image="${esc(imgSrc)}"
          data-booth="${esc(item.booth_id||'')}">
-      <div class="item-img-wrap"><div class="img-loading"><div class="img-spinner"></div></div></div>
+      <div class="item-img-wrap" ${imgClick} style="${imgSrc ? 'cursor:zoom-in' : ''}"><div class="img-loading"><div class="img-spinner"></div></div></div>
       <div class="item-info">
         <div class="item-name">${esc(item.name||'')}</div>
         ${extra||''}
@@ -534,7 +536,7 @@ function renderAvatars(items) {
     buckets[key].forEach(item => {
       const shares = item.shares_body_with?.length
         ? `<div class="shares-with">🔗 shares body with: ${item.shares_body_with.map(esc).join(', ')}</div>` : '';
-      html += buildCard(item, shares).replace('class="item-card"', `class="item-card" data-section="${key}"`);
+      html += buildCard(item, shares, false).replace('class="item-card"', `class="item-card" data-section="${key}"`);
     });
   });
 
@@ -543,10 +545,10 @@ function renderAvatars(items) {
 }
 
 // ── Render a plain grid ───────────────────────────────────────────
-function renderGrid(gridId, items, extraFn) {
+function renderGrid(gridId, items, extraFn, merge) {
   const grid = document.getElementById(gridId);
   if (!items?.length) { grid.innerHTML = emptyHtml(); return; }
-  grid.innerHTML = items.map(item => buildCard(item, extraFn ? extraFn(item) : '')).join('');
+  grid.innerHTML = items.map(item => buildCard(item, extraFn ? extraFn(item) : '', merge)).join('');
   observeCards(gridId);
 }
 
@@ -554,7 +556,19 @@ function emptyHtml() {
   return `<div class="empty-state"><span>✿</span>nothing here yet ♡</div>`;
 }
 
-// ── Tag merging for clothes filters ──────────────────────────────
+// ── Lightbox ──────────────────────────────────────────────────────
+function openLightbox(src, boothId) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb-booth-id').textContent = boothId ? 'booth id: ' + boothId : '';
+  lb.style.display = 'flex';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// ── Tag merging — clothes tab ONLY ───────────────────────────────
 const TAG_MERGE = {
   'chocolat':'Chocolat/Chiffon/Lime/Plum','chiffon':'Chocolat/Chiffon/Lime/Plum',
   'lime':'Chocolat/Chiffon/Lime/Plum','plum':'Chocolat/Chiffon/Lime/Plum',
@@ -564,16 +578,16 @@ const TAG_MERGE = {
   'ririka':'Ririka/Mao','mao':'Ririka/Mao',
   'yugi':'Yugi/Miyo','miyo':'Yugi/Miyo',
 };
-function resolveTag(t) { return TAG_MERGE[t.toLowerCase()] || t; }
-function resolvedTags(item) {
-  return [...new Set((item.tags||[]).map(resolveTag))].sort();
+function resolveTag(t, merge) { return (merge && TAG_MERGE[t.toLowerCase()]) || t; }
+function resolvedTags(item, merge) {
+  return [...new Set((item.tags||[]).map(t => resolveTag(t, merge)))].sort();
 }
 
 // ── Dynamic tag filters ───────────────────────────────────────────
-function buildDynamicFilters(panelId, containerId, items) {
+function buildDynamicFilters(panelId, containerId, items, merge) {
   const container = document.getElementById(containerId);
   if (!container) return;
-  const allTags = [...new Set(items.flatMap(i => resolvedTags(i)))].sort();
+  const allTags = [...new Set(items.flatMap(i => resolvedTags(i, merge)))].sort();
   if (!allTags.length) return;
   container.innerHTML = [
     `<button class="tag-filter active" data-filter="all" onclick="setTagFilter('${panelId}','all',this)">all</button>`,
@@ -631,13 +645,13 @@ fetch('avatars.json')
       if (Array.isArray(data[k])) data[k].sort((a,b) => (a.name||'').localeCompare(b.name||''));
     });
     renderAvatars(data.avatars || []);
-    renderGrid('grid-clothes',  data.clothes  || []);
+    renderGrid('grid-clothes',  data.clothes  || [], null, true);
     renderGrid('grid-hair',     data.hair     || []);
     renderGrid('grid-addons',   data.addons   || []);
     renderGrid('grid-textures', data.textures || []);
     renderGrid('grid-misc',     data.misc     || []);
     buildDynamicFilters('avatars',  'avatars-filters',  data.avatars  || []);
-    buildDynamicFilters('clothes',  'clothes-filters',  data.clothes  || []);
+    buildDynamicFilters('clothes',  'clothes-filters',  data.clothes  || [], true);
     buildDynamicFilters('hair',     'hair-filters',     data.hair     || []);
     buildDynamicFilters('addons',   'addons-filters',   data.addons   || []);
     buildDynamicFilters('textures', 'textures-filters', data.textures || []);
@@ -655,5 +669,12 @@ fetch('avatars.json')
   });
 
 </script>
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.82);display:none;align-items:center;justify-content:center;flex-direction:column;gap:12px;cursor:zoom-out;">
+  <div style="color:#fff;font-size:0.85rem;opacity:0.7;letter-spacing:0.05em;" id="lb-booth-id"></div>
+  <img id="lb-img" src="" style="max-width:90vw;max-height:80vh;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,0.6);object-fit:contain;" onclick="event.stopPropagation()">
+  <div style="color:rgba(255,255,255,0.4);font-size:0.75rem;">click anywhere to close</div>
+</div>
+
 </body>
 </html>
