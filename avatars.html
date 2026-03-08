@@ -372,17 +372,40 @@ const TAG_CLASSES = {
 function tagCls(t) { return TAG_CLASSES[t.toLowerCase()] || 'tag-default'; }
 
 // ── Booth thumbnail fetching ──────────────────────────────────────
+// ── Throttled image loader — max 6 loading at once ───────────────
+let activeLoads = 0;
+const loadQueue = [];
+const MAX_CONCURRENT = 6;
+
 function loadCardImage(imageUrl, wrap) {
   if (!imageUrl) { showPlaceholder(wrap); return; }
-  setImg(wrap, imageUrl);
+  loadQueue.push({ imageUrl, wrap });
+  processQueue();
+}
+
+function processQueue() {
+  while (activeLoads < MAX_CONCURRENT && loadQueue.length > 0) {
+    const { imageUrl, wrap } = loadQueue.shift();
+    activeLoads++;
+    const img = document.createElement('img');
+    img.loading = 'lazy';
+    img.onload = () => {
+      wrap.innerHTML = '';
+      wrap.appendChild(img);
+      activeLoads--;
+      processQueue();
+    };
+    img.onerror = () => {
+      showPlaceholder(wrap);
+      activeLoads--;
+      processQueue();
+    };
+    img.src = imageUrl;
+  }
 }
 
 function setImg(wrap, src) {
-  const img = document.createElement('img');
-  img.loading = 'lazy';
-  img.onerror = () => showPlaceholder(wrap);
-  img.onload  = () => { wrap.innerHTML = ''; wrap.appendChild(img); };
-  img.src = src;
+  loadCardImage(src, wrap);
 }
 function showPlaceholder(wrap) {
   wrap.innerHTML = `<div class="img-loading"><span style="font-size:1.6rem">✿</span></div>`;
@@ -402,7 +425,7 @@ function observeCards(gridId) {
       }
       observer.unobserve(card);
     });
-  }, { rootMargin:'120px' });
+  }, { rootMargin:'200px' });
   grid.querySelectorAll('.item-card').forEach(c => observer.observe(c));
 }
 
