@@ -409,12 +409,35 @@ function toggleDark() {
 const tagFilters = { avatars:'all', clothes:'all', hair:'all', addons:'all', textures:'all', misc:'all' };
 
 // ── Tab switching ─────────────────────────────────────────────────
+// ── Global data store + lazy tab rendering ────────────────────────
+const siteData   = {};
+const renderedTabs = new Set();
+
 function switchCat(cat, btn) {
   document.querySelectorAll('.cat-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
   document.getElementById('cat-' + cat).classList.add('active');
   btn.classList.add('active');
+
+  // Render tab on first visit
+  if (!renderedTabs.has(cat) && siteData[cat]) {
+    renderTab(cat, siteData[cat]);
+    renderedTabs.add(cat);
+  }
+
   updateBadge();
+}
+
+function renderTab(cat, items) {
+  const merge    = cat === 'clothes';
+  const gridId   = 'grid-' + cat;
+
+  if (cat === 'avatars') {
+    renderAvatars(items);
+  } else {
+    renderGrid(gridId, items, null, merge);
+  }
+  buildDynamicFilters(cat, cat + '-filters', items, merge);
 }
 
 // ── Tag colour helper ─────────────────────────────────────────────
@@ -658,16 +681,15 @@ function buildDynamicFilters(panelId, containerId, items, merge) {
 
 // ── Filtering ─────────────────────────────────────────────────────
 function filterPanel(panelId) {
-  const panel  = document.getElementById('cat-' + panelId);
-  const query  = (panel.querySelector('.search-input')?.value||'').toLowerCase().trim();
-  const filter = tagFilters[panelId]||'all';
+  const panel    = document.getElementById('cat-' + panelId);
+  const query    = (panel.querySelector('.search-input')?.value||'').toLowerCase().trim();
+  const filter   = tagFilters[panelId]||'all';
+  const gridId   = 'grid-' + panelId;
+  const state    = pageState[gridId];
   const isFiltered = filter !== 'all' || query !== '';
 
-  // If filtering, make sure all items are rendered first
-  const gridId = 'grid-' + panelId;
-  const state  = pageState[gridId];
   if (isFiltered && state && state.shown < state.items.length) {
-    // Render remaining items silently
+    // Render all items so filtering works across full dataset
     const { items, extraFn, merge } = state;
     const grid = document.getElementById(gridId);
     const batch = items.slice(state.shown);
@@ -676,6 +698,7 @@ function filterPanel(panelId) {
       div.innerHTML = buildCard(item, extraFn ? extraFn(item) : '', merge);
       const card = div.firstElementChild;
       grid.appendChild(card);
+      // Don't load images for hidden items yet
     });
     state.shown = items.length;
     const btn = document.getElementById('more-' + gridId);
@@ -689,7 +712,7 @@ function filterPanel(panelId) {
       || card.dataset.section === filter;
     const show = nameOk && tagOk;
     card.classList.toggle('hidden', !show);
-    // Load image if just becoming visible for the first time
+    // Only load images for visible cards
     if (show) {
       const wrap = card.querySelector('.item-img-wrap');
       if (wrap && !wrap.dataset.loaded) {
@@ -705,6 +728,25 @@ function filterPanel(panelId) {
       .some(c => !c.classList.contains('hidden'));
     div.style.display = hasVisible ? '' : 'none';
   });
+
+  // If back to unfiltered, hide cards beyond page size and show load more again
+  if (!isFiltered && state) {
+    const cards = [...panel.querySelectorAll('.item-card')];
+    cards.forEach((card, i) => {
+      card.classList.toggle('hidden', i >= PAGE_SIZE);
+    });
+    state.shown = Math.min(PAGE_SIZE, state.items.length);
+    const btn = document.getElementById('more-' + gridId);
+    if (btn) {
+      const remaining = state.items.length - state.shown;
+      if (remaining > 0) {
+        btn.textContent = `✦ load more (${remaining} remaining)`;
+        btn.style.display = '';
+      } else {
+        btn.style.display = 'none';
+      }
+    }
+  }
 
   updateBadge();
 }
@@ -732,19 +774,11 @@ fetch('avatars.json')
   .then(data => {
     Object.keys(data).forEach(k => {
       if (Array.isArray(data[k])) data[k].sort((a,b) => (a.name||'').localeCompare(b.name||''));
+      siteData[k] = data[k];
     });
-    renderAvatars(data.avatars || []);
-    renderGrid('grid-clothes',  data.clothes  || [], null, true);
-    renderGrid('grid-hair',     data.hair     || []);
-    renderGrid('grid-addons',   data.addons   || []);
-    renderGrid('grid-textures', data.textures || []);
-    renderGrid('grid-misc',     data.misc     || []);
-    buildDynamicFilters('avatars',  'avatars-filters',  data.avatars  || []);
-    buildDynamicFilters('clothes',  'clothes-filters',  data.clothes  || [], true);
-    buildDynamicFilters('hair',     'hair-filters',     data.hair     || []);
-    buildDynamicFilters('addons',   'addons-filters',   data.addons   || []);
-    buildDynamicFilters('textures', 'textures-filters', data.textures || []);
-    buildDynamicFilters('misc',     'misc-filters',     data.misc     || []);
+    // Only render the initially active tab (avatars)
+    renderTab('avatars', data.avatars || []);
+    renderedTabs.add('avatars');
     updateBadge();
   })
   .catch(() => {
