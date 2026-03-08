@@ -629,13 +629,12 @@ function loadMoreGrid(gridId) {
     if (remaining > 0) {
       btn.textContent = `✦ load more (${remaining} remaining)`;
       btn.style.display = '';
+      btn.onclick = () => loadMoreGrid(gridId);
     } else {
       btn.style.display = 'none';
     }
   }
 }
-
-function emptyHtml() {
   return `<div class="empty-state"><span>✿</span>nothing here yet ♡</div>`;
 }
 
@@ -686,68 +685,63 @@ function filterPanel(panelId) {
   const filter   = tagFilters[panelId]||'all';
   const gridId   = 'grid-' + panelId;
   const state    = pageState[gridId];
-  const isFiltered = filter !== 'all' || query !== '';
+  if (!state) { updateBadge(); return; }
 
-  if (isFiltered && state && state.shown < state.items.length) {
-    // Render all items so filtering works across full dataset
-    const { items, extraFn, merge } = state;
-    const grid = document.getElementById(gridId);
-    const batch = items.slice(state.shown);
-    batch.forEach(item => {
-      const div = document.createElement('div');
-      div.innerHTML = buildCard(item, extraFn ? extraFn(item) : '', merge);
-      const card = div.firstElementChild;
-      grid.appendChild(card);
-      // Don't load images for hidden items yet
-    });
-    state.shown = items.length;
-    const btn = document.getElementById('more-' + gridId);
-    if (btn) btn.style.display = 'none';
-  }
+  const { items, extraFn, merge } = state;
 
-  panel.querySelectorAll('.item-card').forEach(card => {
-    const nameOk = !query || card.dataset.name.includes(query);
-    const tagOk  = filter === 'all'
-      || card.dataset.resolvedtags?.includes(filter)
-      || card.dataset.section === filter;
-    const show = nameOk && tagOk;
-    card.classList.toggle('hidden', !show);
-    // Only load images for visible cards
-    if (show) {
-      const wrap = card.querySelector('.item-img-wrap');
-      if (wrap && !wrap.dataset.loaded) {
-        wrap.dataset.loaded = '1';
-        loadCardImage(card.dataset.image, wrap, card.dataset.booth);
-      }
+  // Filter the full dataset
+  const filtered = items.filter(item => {
+    const nameOk = !query || (item.name||'').toLowerCase().includes(query);
+    const tags   = resolvedTags(item, merge).map(t => t.toLowerCase());
+    const rawT   = (item.tags||[]).map(t => t.toLowerCase());
+    const tagOk  = filter === 'all' || tags.includes(filter) || rawT.includes(filter);
+    return nameOk && tagOk;
+  });
+
+  // Replace grid with fresh filtered+paginated render
+  const grid = document.getElementById(gridId);
+  grid.innerHTML = '';
+  state.filtered  = filtered;
+  state.shownFiltered = 0;
+
+  loadMoreFiltered(gridId);
+
+  panel.querySelectorAll('.section-divider').forEach(d => d.style.display = 'none');
+  updateBadge();
+}
+
+function loadMoreFiltered(gridId) {
+  const state = pageState[gridId];
+  if (!state) return;
+  const { filtered, extraFn, merge } = state;
+  const grid  = document.getElementById(gridId);
+  const btn   = document.getElementById('more-' + gridId);
+  const batch = filtered.slice(state.shownFiltered, state.shownFiltered + PAGE_SIZE);
+
+  batch.forEach(item => {
+    const div = document.createElement('div');
+    div.innerHTML = buildCard(item, extraFn ? extraFn(item) : '', merge);
+    const card = div.firstElementChild;
+    grid.appendChild(card);
+    const wrap = card.querySelector('.item-img-wrap');
+    if (wrap && !wrap.dataset.loaded) {
+      wrap.dataset.loaded = '1';
+      loadCardImage(card.dataset.image, wrap, card.dataset.booth);
     }
   });
 
-  panel.querySelectorAll('.section-divider').forEach(div => {
-    const sec = div.dataset.section;
-    const hasVisible = [...panel.querySelectorAll(`.item-card[data-section="${sec}"]`)]
-      .some(c => !c.classList.contains('hidden'));
-    div.style.display = hasVisible ? '' : 'none';
-  });
+  state.shownFiltered += batch.length;
+  const remaining = filtered.length - state.shownFiltered;
 
-  // If back to unfiltered, hide cards beyond page size and show load more again
-  if (!isFiltered && state) {
-    const cards = [...panel.querySelectorAll('.item-card')];
-    cards.forEach((card, i) => {
-      card.classList.toggle('hidden', i >= PAGE_SIZE);
-    });
-    state.shown = Math.min(PAGE_SIZE, state.items.length);
-    const btn = document.getElementById('more-' + gridId);
-    if (btn) {
-      const remaining = state.items.length - state.shown;
-      if (remaining > 0) {
-        btn.textContent = `✦ load more (${remaining} remaining)`;
-        btn.style.display = '';
-      } else {
-        btn.style.display = 'none';
-      }
+  if (btn) {
+    if (remaining > 0) {
+      btn.textContent = `✦ load more (${remaining} remaining)`;
+      btn.style.display = '';
+      btn.onclick = () => loadMoreFiltered(gridId);
+    } else {
+      btn.style.display = 'none';
     }
   }
-
   updateBadge();
 }
 
@@ -762,10 +756,12 @@ function setTagFilter(panelId, filter, btn) {
 function updateBadge() {
   const panel = document.querySelector('.cat-panel.active');
   if (!panel) return;
-  const total   = panel.querySelectorAll('.item-card').length;
-  const visible = panel.querySelectorAll('.item-card:not(.hidden)').length;
+  const gridId = 'grid-' + panel.id.replace('cat-', '');
+  const state  = pageState[gridId];
+  const shown  = panel.querySelectorAll('.item-card').length;
+  const total  = state?.filtered ? state.filtered.length : (state?.items?.length || shown);
   document.getElementById('count-badge').textContent =
-    visible === total ? `${total} items` : `${visible} / ${total}`;
+    shown === total ? `${total} items` : `${shown} / ${total}`;
 }
 
 // ── Load ──────────────────────────────────────────────────────────
