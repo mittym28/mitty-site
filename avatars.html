@@ -104,15 +104,16 @@
   .cat-panel.active { display:block; animation:fadeUp 0.2s ease; }
 
   /* LAYOUT */
-  .main-layout { display:flex; gap:20px; align-items:flex-start; padding:0; }
-  .panels-wrap { flex:1; min-width:0; }
+  .main-layout { display:block; position:relative; }
+  .panels-wrap { width:100%; }
 
-  /* GLOSSARY */
+  /* GLOSSARY — floating panel */
   .glossary {
-    width:210px; flex-shrink:0; position:sticky; top:20px;
+    position:fixed; top:80px; right:20px; z-index:100;
+    width:200px;
     background:var(--card); border:2px solid var(--rose);
     border-radius:16px; padding:16px; display:flex; flex-direction:column; gap:12px;
-    margin:24px 0 0 24px;
+    box-shadow:0 4px 24px rgba(0,0,0,0.12);
   }
   .glossary-title {
     font-weight:800; color:var(--berry); font-size:0.85rem;
@@ -121,9 +122,10 @@
   .glossary-entry { display:flex; flex-direction:column; gap:3px; }
   .glossary-term { font-weight:700; color:var(--deep-rose); font-size:0.83rem; }
   .glossary-desc { font-size:0.76rem; color:var(--muted); line-height:1.5; }
-  @media(max-width:700px) {
-    .main-layout { flex-direction:column-reverse; }
-    .glossary { width:auto; position:static; margin:0 12px; }
+
+  /* Collapse glossary on smaller screens where it'd overlap */
+  @media(max-width:1100px) {
+    .glossary { display:none; }
   }
   @keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
 
@@ -264,7 +266,7 @@
 <div class="page">
   <div class="header">
     <div>
-      <h1>✦ mitty's list ♡</h1>
+      <h1>✦ random booth list ♡</h1>
       <p></p>
     </div>
     <div class="header-right">
