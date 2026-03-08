@@ -411,22 +411,17 @@ function showPlaceholder(wrap) {
   wrap.innerHTML = `<div class="img-loading"><span style="font-size:1.6rem">✿</span></div>`;
 }
 
-// ── Intersection observer for lazy image loading ──────────────────
+// ── Load images for all cards in a grid ──────────────────────────
 function observeCards(gridId) {
   const grid = document.getElementById(gridId);
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const card = entry.target;
-      const wrap = card.querySelector('.item-img-wrap');
-      if (wrap && !wrap.dataset.loaded) {
-        wrap.dataset.loaded = '1';
-        loadCardImage(card.dataset.image, wrap);
-      }
-      observer.unobserve(card);
-    });
-  }, { rootMargin:'200px' });
-  grid.querySelectorAll('.item-card').forEach(c => observer.observe(c));
+  if (!grid) return;
+  grid.querySelectorAll('.item-card').forEach(card => {
+    const wrap = card.querySelector('.item-img-wrap');
+    if (wrap && !wrap.dataset.loaded) {
+      wrap.dataset.loaded = '1';
+      loadCardImage(card.dataset.image, wrap);
+    }
+  });
 }
 
 // ── Build a card HTML string ──────────────────────────────────────
