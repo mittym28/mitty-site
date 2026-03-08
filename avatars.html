@@ -388,7 +388,6 @@ function processQueue() {
     const { imageUrl, wrap } = loadQueue.shift();
     activeLoads++;
     const img = document.createElement('img');
-    img.loading = 'lazy';
     img.onload = () => {
       wrap.innerHTML = '';
       wrap.appendChild(img);
