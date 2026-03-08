@@ -102,6 +102,29 @@
   /* PANELS */
   .cat-panel { display:none; padding:24px 24px 32px; }
   .cat-panel.active { display:block; animation:fadeUp 0.2s ease; }
+
+  /* LAYOUT */
+  .main-layout { display:flex; gap:20px; align-items:flex-start; padding:0; }
+  .panels-wrap { flex:1; min-width:0; }
+
+  /* GLOSSARY */
+  .glossary {
+    width:210px; flex-shrink:0; position:sticky; top:20px;
+    background:var(--card); border:2px solid var(--rose);
+    border-radius:16px; padding:16px; display:flex; flex-direction:column; gap:12px;
+    margin:24px 0 0 24px;
+  }
+  .glossary-title {
+    font-weight:800; color:var(--berry); font-size:0.85rem;
+    letter-spacing:0.05em; text-transform:uppercase;
+  }
+  .glossary-entry { display:flex; flex-direction:column; gap:3px; }
+  .glossary-term { font-weight:700; color:var(--deep-rose); font-size:0.83rem; }
+  .glossary-desc { font-size:0.76rem; color:var(--muted); line-height:1.5; }
+  @media(max-width:700px) {
+    .main-layout { flex-direction:column-reverse; }
+    .glossary { width:auto; position:static; margin:0 12px; }
+  }
   @keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
 
   /* CONTROLS */
@@ -241,8 +264,8 @@
 <div class="page">
   <div class="header">
     <div>
-      <h1>✦ mitty's asset list ♡</h1>
-      <p>for friends only — please don't share this link!</p>
+      <h1>✦ mitty's list ♡</h1>
+      <p></p>
     </div>
     <div class="header-right">
       <span class="count-badge" id="count-badge">loading...</span>
@@ -260,76 +283,96 @@
       <button class="cat-tab"        onclick="switchCat('misc',    this)">✦ misc</button>
     </div>
 
-    <!-- AVATARS -->
-    <div id="cat-avatars" class="cat-panel active">
-      <div class="controls">
-        <div class="search-wrap">
-          <input class="search-input" type="text" placeholder="search avatars..." oninput="filterPanel('avatars')">
+    <div class="main-layout">
+      <!-- GLOSSARY SIDEBAR -->
+      <aside class="glossary">
+        <div class="glossary-title">✦ glossary</div>
+        <div class="glossary-entry">
+          <div class="glossary-term">Mamefriends</div>
+          <div class="glossary-desc">A series of avatars based on Mamehinata. They all share the same body, so any Mamefriend-compatible clothing will fit all of them.</div>
         </div>
-        <button class="tag-filter active" data-filter="all"        onclick="setTagFilter('avatars','all',this)">all</button>
-        <button class="tag-filter"        data-filter="mamefriend"  onclick="setTagFilter('avatars','mamefriend',this)">mamefriend</button>
-        <button class="tag-filter"        data-filter="chibi"       onclick="setTagFilter('avatars','chibi',this)">chibi</button>
-        <button class="tag-filter"        data-filter="feminine"    onclick="setTagFilter('avatars','feminine',this)">feminine</button>
-        <button class="tag-filter"        data-filter="masculine"   onclick="setTagFilter('avatars','masculine',this)">masculine</button>
-      </div>
-      <div class="card-grid" id="grid-avatars"></div>
-    </div>
+        <div class="glossary-entry">
+          <div class="glossary-term">Komado</div>
+          <div class="glossary-desc">A body type shared by Rusk, Karin, Mint, and Milk. Clothes made for any of them will fit all Komado avatars.</div>
+        </div>
+        <div class="glossary-entry">
+          <div class="glossary-term">PlusHead</div>
+          <div class="glossary-desc">A body shared across several avatars. PlusHead clothes are cross-compatible between all avatars that use it.</div>
+        </div>
+        <div class="glossary-entry">
+          <div class="glossary-term">Mochifitter</div>
+          <div class="glossary-desc">A tool that lets clothes from one avatar fit onto another, as long as a profile exists for it. For example, a Manuka outfit could potentially be made to fit Mamehinata.</div>
+        </div>
+      </aside>
 
-    <!-- CLOTHES -->
-    <div id="cat-clothes" class="cat-panel">
-      <div class="controls">
-        <div class="search-wrap">
-          <input class="search-input" type="text" placeholder="search clothes..." oninput="filterPanel('clothes')">
+      <div class="panels-wrap">
+        <!-- AVATARS -->
+        <div id="cat-avatars" class="cat-panel active">
+          <div class="controls">
+            <div class="search-wrap">
+              <input class="search-input" type="text" placeholder="search avatars..." oninput="filterPanel('avatars')">
+            </div>
+            <div id="avatars-filters" style="display:contents"></div>
+          </div>
+          <div class="card-grid" id="grid-avatars"></div>
         </div>
-        <div id="clothes-filters" style="display:contents"></div>
-      </div>
-      <div class="card-grid" id="grid-clothes"></div>
-    </div>
 
-    <!-- HAIR -->
-    <div id="cat-hair" class="cat-panel">
-      <div class="controls">
-        <div class="search-wrap">
-          <input class="search-input" type="text" placeholder="search hair..." oninput="filterPanel('hair')">
+        <!-- CLOTHES -->
+        <div id="cat-clothes" class="cat-panel">
+          <div class="controls">
+            <div class="search-wrap">
+              <input class="search-input" type="text" placeholder="search clothes..." oninput="filterPanel('clothes')">
+            </div>
+            <div id="clothes-filters" style="display:contents"></div>
+          </div>
+          <div class="card-grid" id="grid-clothes"></div>
         </div>
-      </div>
-      <div class="card-grid" id="grid-hair"></div>
-    </div>
 
-    <!-- ADDONS -->
-    <div id="cat-addons" class="cat-panel">
-      <div class="controls">
-        <div class="search-wrap">
-          <input class="search-input" type="text" placeholder="search addons..." oninput="filterPanel('addons')">
+        <!-- HAIR -->
+        <div id="cat-hair" class="cat-panel">
+          <div class="controls">
+            <div class="search-wrap">
+              <input class="search-input" type="text" placeholder="search hair..." oninput="filterPanel('hair')">
+            </div>
+            <div id="hair-filters" style="display:contents"></div>
+          </div>
+          <div class="card-grid" id="grid-hair"></div>
         </div>
-        <div id="addons-filters" style="display:contents"></div>
-      </div>
-      <div class="card-grid" id="grid-addons"></div>
-    </div>
 
-    <!-- TEXTURES -->
-    <div id="cat-textures" class="cat-panel">
-      <div class="controls">
-        <div class="search-wrap">
-          <input class="search-input" type="text" placeholder="search textures..." oninput="filterPanel('textures')">
+        <!-- ADDONS -->
+        <div id="cat-addons" class="cat-panel">
+          <div class="controls">
+            <div class="search-wrap">
+              <input class="search-input" type="text" placeholder="search addons..." oninput="filterPanel('addons')">
+            </div>
+            <div id="addons-filters" style="display:contents"></div>
+          </div>
+          <div class="card-grid" id="grid-addons"></div>
         </div>
-        <button class="tag-filter active" data-filter="all"     onclick="setTagFilter('textures','all',this)">all</button>
-        <button class="tag-filter"        data-filter="makeup"  onclick="setTagFilter('textures','makeup',this)">makeup</button>
-        <button class="tag-filter"        data-filter="eyes"    onclick="setTagFilter('textures','eyes',this)">eyes</button>
-        <button class="tag-filter"        data-filter="recolor" onclick="setTagFilter('textures','recolor',this)">recolor</button>
-      </div>
-      <div class="card-grid" id="grid-textures"></div>
-    </div>
 
-    <!-- MISC -->
-    <div id="cat-misc" class="cat-panel">
-      <div class="controls">
-        <div class="search-wrap">
-          <input class="search-input" type="text" placeholder="search misc..." oninput="filterPanel('misc')">
+        <!-- TEXTURES -->
+        <div id="cat-textures" class="cat-panel">
+          <div class="controls">
+            <div class="search-wrap">
+              <input class="search-input" type="text" placeholder="search textures..." oninput="filterPanel('textures')">
+            </div>
+            <div id="textures-filters" style="display:contents"></div>
+          </div>
+          <div class="card-grid" id="grid-textures"></div>
         </div>
-      </div>
-      <div class="card-grid" id="grid-misc"></div>
-    </div>
+
+        <!-- MISC -->
+        <div id="cat-misc" class="cat-panel">
+          <div class="controls">
+            <div class="search-wrap">
+              <input class="search-input" type="text" placeholder="search misc..." oninput="filterPanel('misc')">
+            </div>
+            <div id="misc-filters" style="display:contents"></div>
+          </div>
+          <div class="card-grid" id="grid-misc"></div>
+        </div>
+      </div><!-- end panels-wrap -->
+    </div><!-- end main-layout -->
 
   </div>
 </div>
@@ -377,15 +420,15 @@ let activeLoads = 0;
 const loadQueue = [];
 const MAX_CONCURRENT = 6;
 
-function loadCardImage(imageUrl, wrap) {
-  if (!imageUrl) { showPlaceholder(wrap); return; }
-  loadQueue.push({ imageUrl, wrap });
+function loadCardImage(imageUrl, wrap, boothId) {
+  if (!imageUrl && !boothId) { showPlaceholder(wrap); return; }
+  loadQueue.push({ imageUrl, boothId, wrap });
   processQueue();
 }
 
 function processQueue() {
   while (activeLoads < MAX_CONCURRENT && loadQueue.length > 0) {
-    const { imageUrl, wrap } = loadQueue.shift();
+    const { imageUrl, boothId, wrap } = loadQueue.shift();
     activeLoads++;
     const img = document.createElement('img');
     img.onload = () => {
@@ -395,11 +438,16 @@ function processQueue() {
       processQueue();
     };
     img.onerror = () => {
-      showPlaceholder(wrap);
-      activeLoads--;
-      processQueue();
+      // Try local fallback image named after booth ID
+      if (boothId && img.src !== `images/clothes/${boothId}.jpg`) {
+        img.src = `images/clothes/${boothId}.jpg`;
+      } else {
+        showPlaceholder(wrap);
+        activeLoads--;
+        processQueue();
+      }
     };
-    img.src = imageUrl;
+    img.src = imageUrl || `images/clothes/${boothId}.jpg`;
   }
 }
 
@@ -418,21 +466,26 @@ function observeCards(gridId) {
     const wrap = card.querySelector('.item-img-wrap');
     if (wrap && !wrap.dataset.loaded) {
       wrap.dataset.loaded = '1';
-      loadCardImage(card.dataset.image, wrap);
+      loadCardImage(card.dataset.image, wrap, card.dataset.booth);
     }
   });
 }
 
 // ── Build a card HTML string ──────────────────────────────────────
 function buildCard(item, extra) {
-  const tags     = (item.tags||[]).map(t => `<span class="item-tag ${tagCls(t)}">${t}</span>`).join('');
-  const boothUrl = item.booth_id ? `https://booth.pm/en/items/${item.booth_id}` : (item.booth_url||'');
-  const boothBtn = boothUrl ? `<a class="booth-btn" href="${boothUrl}" target="_blank" rel="noopener">✦ view on booth</a>` : '';
+  const rawTags     = item.tags||[];
+  const dispTags    = resolvedTags(item);
+  const resolvedStr = dispTags.map(t => t.toLowerCase()).join('|');
+  const tags        = dispTags.map(t => `<span class="item-tag ${tagCls(t)}">${t}</span>`).join('');
+  const boothUrl    = item.booth_id ? `https://booth.pm/en/items/${item.booth_id}` : (item.booth_url||'');
+  const boothBtn    = boothUrl ? `<a class="booth-btn" href="${boothUrl}" target="_blank" rel="noopener">✦ view on booth</a>` : '';
   return `
     <div class="item-card"
          data-name="${esc((item.name||'').toLowerCase())}"
-         data-tags="${esc((item.tags||[]).join(',').toLowerCase())}"
-         data-image="${esc(item.image||'')}">
+         data-tags="${esc(rawTags.join(',').toLowerCase())}"
+         data-resolvedtags="${esc(resolvedStr)}"
+         data-image="${esc(item.image||'')}"
+         data-booth="${esc(item.booth_id||'')}">
       <div class="item-img-wrap"><div class="img-loading"><div class="img-spinner"></div></div></div>
       <div class="item-info">
         <div class="item-name">${esc(item.name||'')}</div>
@@ -499,15 +552,31 @@ function emptyHtml() {
   return `<div class="empty-state"><span>✿</span>nothing here yet ♡</div>`;
 }
 
-// ── Dynamic tag filters (clothes + addons) ────────────────────────
+// ── Tag merging for clothes filters ──────────────────────────────
+const TAG_MERGE = {
+  'chocolat':'Chocolat/Chiffon/Lime/Plum','chiffon':'Chocolat/Chiffon/Lime/Plum',
+  'lime':'Chocolat/Chiffon/Lime/Plum','plum':'Chocolat/Chiffon/Lime/Plum',
+  'mafuyu':'Mafuyu/Cian','cian':'Mafuyu/Cian',
+  'milfy':'Milfy/Eku','eku':'Milfy/Eku',
+  'mizuki':'Mizuki/Rurune','rurune':'Mizuki/Rurune',
+  'ririka':'Ririka/Mao','mao':'Ririka/Mao',
+  'yugi':'Yugi/Miyo','miyo':'Yugi/Miyo',
+};
+function resolveTag(t) { return TAG_MERGE[t.toLowerCase()] || t; }
+function resolvedTags(item) {
+  return [...new Set((item.tags||[]).map(resolveTag))].sort();
+}
+
+// ── Dynamic tag filters ───────────────────────────────────────────
 function buildDynamicFilters(panelId, containerId, items) {
   const container = document.getElementById(containerId);
   if (!container) return;
-  const allTags = [...new Set(items.flatMap(i => (i.tags||[])))].sort();
+  const allTags = [...new Set(items.flatMap(i => resolvedTags(i)))].sort();
+  if (!allTags.length) return;
   container.innerHTML = [
     `<button class="tag-filter active" data-filter="all" onclick="setTagFilter('${panelId}','all',this)">all</button>`,
     ...allTags.map(t =>
-      `<button class="tag-filter" data-filter="${t.toLowerCase()}" onclick="setTagFilter('${panelId}','${t.toLowerCase()}',this)">${esc(t)}</button>`)
+      `<button class="tag-filter" data-filter="${esc(t.toLowerCase())}" onclick="setTagFilter('${panelId}','${esc(t.toLowerCase())}',this)">${esc(t)}</button>`)
   ].join('');
 }
 
@@ -520,12 +589,11 @@ function filterPanel(panelId) {
   panel.querySelectorAll('.item-card').forEach(card => {
     const nameOk = card.dataset.name.includes(query);
     const tagOk  = filter === 'all'
-      || card.dataset.tags.includes(filter)
+      || card.dataset.resolvedtags?.includes(filter)
       || card.dataset.section === filter;
     card.classList.toggle('hidden', !(nameOk && tagOk));
   });
 
-  // Show/hide section dividers based on visible cards
   panel.querySelectorAll('.section-divider').forEach(div => {
     const sec = div.dataset.section;
     const hasVisible = [...panel.querySelectorAll(`.item-card[data-section="${sec}"]`)]
@@ -557,14 +625,21 @@ function updateBadge() {
 fetch('avatars.json')
   .then(r => { if (!r.ok) throw new Error(); return r.json(); })
   .then(data => {
+    Object.keys(data).forEach(k => {
+      if (Array.isArray(data[k])) data[k].sort((a,b) => (a.name||'').localeCompare(b.name||''));
+    });
     renderAvatars(data.avatars || []);
     renderGrid('grid-clothes',  data.clothes  || []);
     renderGrid('grid-hair',     data.hair     || []);
     renderGrid('grid-addons',   data.addons   || []);
     renderGrid('grid-textures', data.textures || []);
     renderGrid('grid-misc',     data.misc     || []);
-    buildDynamicFilters('clothes', 'clothes-filters', data.clothes || []);
-    buildDynamicFilters('addons',  'addons-filters',  data.addons  || []);
+    buildDynamicFilters('avatars',  'avatars-filters',  data.avatars  || []);
+    buildDynamicFilters('clothes',  'clothes-filters',  data.clothes  || []);
+    buildDynamicFilters('hair',     'hair-filters',     data.hair     || []);
+    buildDynamicFilters('addons',   'addons-filters',   data.addons   || []);
+    buildDynamicFilters('textures', 'textures-filters', data.textures || []);
+    buildDynamicFilters('misc',     'misc-filters',     data.misc     || []);
     updateBadge();
   })
   .catch(() => {
@@ -576,6 +651,7 @@ fetch('avatars.json')
     });
     document.getElementById('count-badge').textContent = '0 items';
   });
+
 </script>
 </body>
 </html>
